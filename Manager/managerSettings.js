@@ -13,9 +13,7 @@ import {
     @ParagraphProperty
 } from "../../Vigilance";
 
-
-
-@Vigilant('rfuv2/Manager', 'RiccioFishingUtils V2.0.0', {
+@Vigilant('rfuv2/data/settings/Manager', 'RiccioFishingUtils V2.0.0', {
     getCategoryComparator: () => (a, b) => {
         const categories = ['Introduction'];
 
@@ -43,7 +41,7 @@ class Settings {
         category: 'Introduction',
         subcategory: 'Extensions',
     })
-    chatUtils = false;
+    chatUtils = true;
 
     @ButtonProperty({
         name: "Open Chat Utils Settings",
@@ -64,7 +62,7 @@ class Settings {
         category: 'Introduction',
         subcategory: 'Extensions',
     })
-    cishingUtils = false;
+    cishingUtils = true;
 
     @ButtonProperty({
         name: "Open Cishing Utils Settings",
@@ -85,7 +83,7 @@ class Settings {
         category: 'Introduction',
         subcategory: 'Extensions',
     })
-    generalUtils = false;
+    generalUtils = true;
 
     @ButtonProperty({
         name: "Open General Utils Settings",
