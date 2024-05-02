@@ -13,7 +13,9 @@ import {
     @ParagraphProperty
 } from "../../Vigilance";
 
-@Vigilant('rfuv2/data/settings/Manager', 'RiccioFishingUtils V2.0.0', {
+import chatSettings from "../Extensions/ChatUtils/chatSettings";
+
+@Vigilant('rfuv2/data/Manager', 'RiccioFishingUtils V2.0.0', {
     getCategoryComparator: () => (a, b) => {
         const categories = ['Introduction'];
 
@@ -21,7 +23,7 @@ import {
     }
 })
 
-class Settings {
+class ManagerSettings {
 
     @ButtonProperty({
         name: "Welcome to rfu!",
@@ -45,14 +47,14 @@ class Settings {
 
     @ButtonProperty({
         name: "Open Chat Utils Settings",
-        description: "Opens the chat settings\n&0Keywords: ",
+        description: "Opens the chat settings\n&0Keywords: commands,warp,invite,togglewarp,transfer,pt",
         category: "Introduction",
         subcategory: 'Acess Extensions',
         placeholder: "Open"
     })
     openChatUtils() {
         Client.currentGui.close()
-        //cishingUtils.openHere
+        chatSettings.openGUI()
     }
 
     //Cishing Utils
@@ -76,6 +78,27 @@ class Settings {
         //cishingUtils.openHere
     }
 
+    //Fishing Utils
+    @SwitchProperty({
+        name: 'Toggle Fishing Utils',
+        description: 'Enable/Disable the fishing utils features',
+        category: 'Introduction',
+        subcategory: 'Extensions',
+    })
+    fishingUtils = true;
+
+    @ButtonProperty({
+        name: "Open Fishing Utils Settings",
+        description: "Opens the fishing settings\n&0Keywords: ",
+        category: "Introduction",
+        subcategory: 'Acess Extensions',
+        placeholder: "Open"
+    })
+    openFishingUtils() {
+        Client.currentGui.close()
+        //fishingUtils.openHere
+    }
+
     //General Utils
     @SwitchProperty({
         name: 'Toggle General Utils',
@@ -97,6 +120,48 @@ class Settings {
         //generalUtils.openHere
     }
 
+    //Hollows Utils
+    @SwitchProperty({
+        name: 'Toggle Hollows Utils',
+        description: 'Enable/Disable the hollows utils features',
+        category: 'Introduction',
+        subcategory: 'Extensions',
+    })
+    hollowsUtils = true;
+
+    @ButtonProperty({
+        name: "Open Hollows Utils Settings",
+        description: "Opens the hollows settings\n&0Keywords: ",
+        category: "Introduction",
+        subcategory: 'Acess Extensions',
+        placeholder: "Open"
+    })
+    openHollowsUtils() {
+        Client.currentGui.close()
+        //hollowsUtils.openHere
+    }
+
+    //Ink Utils
+    @SwitchProperty({
+        name: 'Toggle Ink Utils',
+        description: 'Enable/Disable the ink utils features',
+        category: 'Introduction',
+        subcategory: 'Extensions',
+    })
+    hollowsUtils = true;
+
+    @ButtonProperty({
+        name: "Open Ink Utils Settings",
+        description: "Opens the ink settings\n&0Keywords: ",
+        category: "Introduction",
+        subcategory: 'Acess Extensions',
+        placeholder: "Open"
+    })
+    openInkUtils() {
+        Client.currentGui.close()
+        //inkUtils.openHere
+    }
+
     constructor() {
         this.initialize(this);
         this.addDependency("Open Chat Utils Settings", "Toggle Chat Utils");
@@ -105,4 +170,4 @@ class Settings {
     }
 }
 
-export default new Settings()
+export default new ManagerSettings()

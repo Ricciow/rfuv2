@@ -6,6 +6,7 @@
   "requires": [
     "PogData",
     "Vigilance",
-    "RenderLib"
+    "RenderLib",
+    "Elementa"
   ]
 }

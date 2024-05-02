@@ -1,0 +1,50 @@
+
+[party_commands]
+
+	[party_commands.configuration]
+		toggle_party_commands = true
+		command_prefix = "!"
+		command_cooldown = 1
+
+	[party_commands."==_configuration_=="]
+		toggle_party_commands = true
+		command_prefix = "!"
+		command_cooldown = 1
+
+	[party_commands.extras]
+		"warp_on_im_muted!" = false
+		"●_leader_only_new_member_help" = true
+		new_member_help_command = false
+
+	[party_commands.commands]
+		help = true
+		transfer = true
+		allinvite = true
+		invite = true
+		togglewarp = true
+		coords = true
+		warp = true
+
+[introduction]
+
+	[introduction.extensions]
+		toggle_ink_utils = true
+		toggle_fishing_utils = true
+		toggle_cishing_utils = true
+		toggle_chat_utils = true
+		toggle_general_utils = true
+
+[chat_commands]
+
+	[chat_commands.party_commands]
+		help = true
+		transfer = true
+		"warp_on_im_muted!" = false
+		"●_leader_only_new_member_help" = true
+		new_member_help_command = false
+		allinvite = true
+		invite = true
+		togglewarp = true
+		coords = true
+		warp = true
+
