@@ -25,7 +25,7 @@ import {
     UIWrappedText
 } from "../../../Elementa";
    
-import blacklist from "../../data/Chat/blacklist"
+import partyData from "../../data/Chat/partyData"
 
 const Color = Java.type("java.awt.Color");
 
@@ -34,7 +34,7 @@ class BlackListWindow {
      * @param ChatSettings The chat settings window
      */
     constructor() {
-        this.values = blacklist["List"] ? blacklist["List"] : [];
+        this.values = partyData["blacklist"] ? partyData["blacklist"] : [];
         this.ChatSettings = null;
         this.textInputs = [];
 
@@ -44,6 +44,11 @@ class BlackListWindow {
             }
         }, true, false);
         this.Window = this.Screen.init()
+        register("guiClosed", (gui) => {
+            if(gui.toString() == this.Screen.toString()) { //Why compare as strings????? didnt work otherwise :shrug:
+                this.leaveFunction()
+            }
+        })
         this._CreateMainArea()
         this._loadValues()
     }
@@ -54,8 +59,8 @@ class BlackListWindow {
     }
 
     leaveFunction() {
-        blacklist["List"] = this.inputs
-        blacklist.save()
+        partyData["blacklist"] = this.inputs
+        partyData.save()
         if(this.ChatSettings) {
             this.ChatSettings.openGUI()
         }
@@ -232,7 +237,6 @@ class BlackListWindow {
             .setHeight(new SubtractiveConstraint((100).percent(), (2).pixels()))
             .setChildOf(Line)
             .onMouseClick(() => {
-                Client.currentGui.close()
                 this.leaveFunction()
             });
     

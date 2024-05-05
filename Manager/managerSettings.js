@@ -47,13 +47,13 @@ class ManagerSettings {
 
     @ButtonProperty({
         name: "Open Chat Utils Settings",
-        description: "Opens the chat settings\n&0Keywords: commands,warp,invite,togglewarp,transfer,pt",
+        description: "Opens the chat settings\n/rfu chat\n&0Keywords: commands,warp,invite,togglewarp,transfer,pt",
         category: "Introduction",
-        subcategory: 'Acess Extensions',
+        subcategory: 'Access Extensions',
         placeholder: "Open"
     })
     openChatUtils() {
-        Client.currentGui.close()
+        // Client.currentGui.close() apparently you dont need this
         chatSettings.openGUI()
     }
 
@@ -68,13 +68,12 @@ class ManagerSettings {
 
     @ButtonProperty({
         name: "Open Cishing Utils Settings",
-        description: "Opens the cishing settings\n&0Keywords: ",
+        description: "Opens the cishing settings\n/rfu cishing\n&0Keywords: ",
         category: "Introduction",
-        subcategory: 'Acess Extensions',
+        subcategory: 'Access Extensions',
         placeholder: "Open"
     })
     openCishingUtils() {
-        Client.currentGui.close()
         //cishingUtils.openHere
     }
 
@@ -89,13 +88,12 @@ class ManagerSettings {
 
     @ButtonProperty({
         name: "Open Fishing Utils Settings",
-        description: "Opens the fishing settings\n&0Keywords: ",
+        description: "Opens the fishing settings\n/rfu fishing\n&0Keywords: ",
         category: "Introduction",
-        subcategory: 'Acess Extensions',
+        subcategory: 'Access Extensions',
         placeholder: "Open"
     })
     openFishingUtils() {
-        Client.currentGui.close()
         //fishingUtils.openHere
     }
 
@@ -110,13 +108,12 @@ class ManagerSettings {
 
     @ButtonProperty({
         name: "Open General Utils Settings",
-        description: "Opens the general settings\n&0Keywords: ",
+        description: "Opens the general settings\n/rfu general\n&0Keywords: ",
         category: "Introduction",
-        subcategory: 'Acess Extensions',
+        subcategory: 'Access Extensions',
         placeholder: "Open"
     })
     openGeneralUtils() {
-        Client.currentGui.close()
         //generalUtils.openHere
     }
 
@@ -131,13 +128,12 @@ class ManagerSettings {
 
     @ButtonProperty({
         name: "Open Hollows Utils Settings",
-        description: "Opens the hollows settings\n&0Keywords: ",
+        description: "Opens the hollows settings\n/rfu hollows\n&0Keywords: ",
         category: "Introduction",
-        subcategory: 'Acess Extensions',
+        subcategory: 'Access Extensions',
         placeholder: "Open"
     })
     openHollowsUtils() {
-        Client.currentGui.close()
         //hollowsUtils.openHere
     }
 
@@ -152,13 +148,12 @@ class ManagerSettings {
 
     @ButtonProperty({
         name: "Open Ink Utils Settings",
-        description: "Opens the ink settings\n&0Keywords: ",
+        description: "Opens the ink settings\n/rfu ink\n&0Keywords: ",
         category: "Introduction",
-        subcategory: 'Acess Extensions',
+        subcategory: 'Access Extensions',
         placeholder: "Open"
     })
     openInkUtils() {
-        Client.currentGui.close()
         //inkUtils.openHere
     }
 

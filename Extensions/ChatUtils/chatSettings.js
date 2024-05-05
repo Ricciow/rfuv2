@@ -17,7 +17,7 @@ import BlackListWindow from "./blacklistWindow";
 
 @Vigilant('rfuv2/data/Chat', 'RiccioFishingUtils V2.0.0', {
     getCategoryComparator: () => (a, b) => {
-        const categories = ['Return', 'Party Commands', 'Information Commands', 'Hiding'];
+        const categories = ['Navigation', 'Party Commands', 'Information Commands', 'Hiding'];
 
         return categories.indexOf(a.name) - categories.indexOf(b.name);
     }
@@ -28,11 +28,10 @@ class ChatSettings {
     @ButtonProperty({
         name: 'Return to selection menu',
         description: 'Sends you back to the first page',
-        category: 'Return',
+        category: 'Navigation',
         placeholder: "Return"
     })
     openSelectionMenu() {
-        Client.currentGui.close()
         ChatLib.command("rfuv2", true) //Command to open main menu
     }
 
@@ -71,7 +70,6 @@ class ChatSettings {
         placeholder: "Modify"
     })
     openBlacklistGui() {
-        Client.currentGui.close()
         BlackListWindow.setSettingsGui(this).open()
     }
 
