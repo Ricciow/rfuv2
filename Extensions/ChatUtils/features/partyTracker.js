@@ -72,30 +72,35 @@ register("chat", () => {
     partyData.PARTY['inParty'] = false;
     partyData.PARTY['isLeader'] = false;
     partyData.PARTY['members'] = [];
+    partyData.PARTY['warpExcluded'] = [];
 }).setCriteria("You left the party.");
 
 register("chat", () => {
     partyData.PARTY['inParty'] = false;
     partyData.PARTY['isLeader'] = false;
     partyData.PARTY['members'] = [];
+    partyData.PARTY['warpExcluded'] = [];
 }).setCriteria("The party was disbanded because all invites expired and the party was empty.");
 
 register("chat", () => {
     partyData.PARTY['inParty'] = false;
     partyData.PARTY['isLeader'] = false;
     partyData.PARTY['members'] = [];
+    partyData.PARTY['warpExcluded'] = [];
 }).setCriteria("The party was disbanded because the party leader disconnected.");
 
 register("chat", () => {
     partyData.PARTY['inParty'] = false;
     partyData.PARTY['isLeader'] = false;
     partyData.PARTY['members'] = [];
+    partyData.PARTY['warpExcluded'] = [];
 }).setCriteria("${*} has disbanded the party!");
 
 register("chat", () => {
     partyData.PARTY['inParty'] = false;
     partyData.PARTY['isLeader'] = false;
     partyData.PARTY['members'] = [];
+    partyData.PARTY['warpExcluded'] = [];
 }).setCriteria("You are not in a party right now.");
 
 register("chat", (user, user2) => {
@@ -117,6 +122,7 @@ register("chat", (user, user2) => {
         partyData.PARTY['isLeader'] = false;
         partyData.PARTY['inParty'] = false;
         partyData.PARTY['members'] = [];
+        partyData.PARTY['warpExcluded'] = [];
         return
     }
     removeFromArray(partyData.PARTY['members'], removeRankTag(user2))
@@ -124,6 +130,7 @@ register("chat", (user, user2) => {
 
 register("chat", (user) => {
     removeFromArray(partyData.PARTY['members'], removeRankTag(user))
+    if(partyData.PARTY['warpExcluded'].includes(removeRankTag(user))) removeFromArray(partyData.PARTY['warpExcluded'], removeRankTag(user));
 }).setCriteria("${user} has left the party.");
 
 register("chat", (user) => {
@@ -144,6 +151,7 @@ register("worldload", () => {
             partyData.PARTY['inParty'] = false;
             partyData.PARTY['isLeader'] = false;
             partyData.PARTY['members'] = [];
+            partyData.PARTY['warpExcluded'] = [];
         }
     }
 });

@@ -36,6 +36,14 @@ class ManagerSettings {
         java.awt.Desktop.getDesktop().browse(new java.net.URI("https://discord.gg/JfrXm6TqXz"));
     }
 
+    @SwitchProperty({
+        name: 'Toggle load messages',
+        description: 'Enable/Disable the loading messages',
+        category: 'Introduction',
+        subcategory: '=== Welcome ===',
+    })
+    loadMessages = true;
+
     //Chat Utils
     @SwitchProperty({
         name: 'Toggle Chat Utils',
@@ -47,13 +55,12 @@ class ManagerSettings {
 
     @ButtonProperty({
         name: "Open Chat Utils Settings",
-        description: "Opens the chat settings\n/rfu chat\n&0Keywords: commands,warp,invite,togglewarp,transfer,pt",
+        description: "Opens the chat settings\n/rfu chat\n&eKeywords: commands,warp,invite,togglewarp,transfer,pt",
         category: "Introduction",
         subcategory: 'Access Extensions',
         placeholder: "Open"
     })
     openChatUtils() {
-        // Client.currentGui.close() apparently you dont need this
         chatSettings.openGUI()
     }
 
@@ -68,7 +75,7 @@ class ManagerSettings {
 
     @ButtonProperty({
         name: "Open Cishing Utils Settings",
-        description: "Opens the cishing settings\n/rfu cishing\n&0Keywords: ",
+        description: "Opens the cishing settings\n/rfu cishing\n&eKeywords: ",
         category: "Introduction",
         subcategory: 'Access Extensions',
         placeholder: "Open"
@@ -88,7 +95,7 @@ class ManagerSettings {
 
     @ButtonProperty({
         name: "Open Fishing Utils Settings",
-        description: "Opens the fishing settings\n/rfu fishing\n&0Keywords: ",
+        description: "Opens the fishing settings\n/rfu fishing\n&eKeywords: ",
         category: "Introduction",
         subcategory: 'Access Extensions',
         placeholder: "Open"
@@ -108,7 +115,7 @@ class ManagerSettings {
 
     @ButtonProperty({
         name: "Open General Utils Settings",
-        description: "Opens the general settings\n/rfu general\n&0Keywords: ",
+        description: "Opens the general settings\n/rfu general\n&eKeywords: ",
         category: "Introduction",
         subcategory: 'Access Extensions',
         placeholder: "Open"
@@ -128,7 +135,7 @@ class ManagerSettings {
 
     @ButtonProperty({
         name: "Open Hollows Utils Settings",
-        description: "Opens the hollows settings\n/rfu hollows\n&0Keywords: ",
+        description: "Opens the hollows settings\n/rfu hollows\n&eKeywords: ",
         category: "Introduction",
         subcategory: 'Access Extensions',
         placeholder: "Open"
@@ -148,7 +155,7 @@ class ManagerSettings {
 
     @ButtonProperty({
         name: "Open Ink Utils Settings",
-        description: "Opens the ink settings\n/rfu ink\n&0Keywords: ",
+        description: "Opens the ink settings\n/rfu ink\n&eKeywords: ",
         category: "Introduction",
         subcategory: 'Access Extensions',
         placeholder: "Open"

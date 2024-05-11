@@ -32,7 +32,57 @@ class ChatSettings {
         placeholder: "Return"
     })
     openSelectionMenu() {
-        ChatLib.command("rfuv2", true) //Command to open main menu
+        ChatLib.command("rfuv2", true) 
+    }
+
+    @ButtonProperty({
+        name: "Open Cishing Utils Settings",
+        description: "Opens the cishing settings",
+        category: 'Navigation',
+        placeholder: "Open"
+    })
+    openCishingUtils() {
+        ChatLib.command("rfuv2 cishing", true)
+    }
+
+    @ButtonProperty({
+        name: "Open Fishing Utils Settings",
+        description: "Opens the fishing settings",
+        category: 'Navigation',
+        placeholder: "Open"
+    })
+    openFishingUtils() {
+        ChatLib.command("rfuv2 fishing", true) 
+    }
+
+    @ButtonProperty({
+        name: "Open General Utils Settings",
+        description: "Opens the general settings",
+        category: 'Navigation',
+        placeholder: "Open"
+    })
+    openGeneralUtils() {
+        ChatLib.command("rfuv2 general", true) 
+    }
+
+    @ButtonProperty({
+        name: "Open Hollows Utils Settings",
+        description: "Opens the hollows settings",
+        category: 'Navigation',
+        placeholder: "Open"
+    })
+    openHollowsUtils() {
+        ChatLib.command("rfuv2 hollows", true)
+    }
+
+    @ButtonProperty({
+        name: "Open Ink Utils Settings",
+        description: "Opens the cishing settings",
+        category: 'Navigation',
+        placeholder: "Open"
+    })
+    openInkUtils() {
+        ChatLib.command("rfuv2 ink", true)
     }
 
      //Party Commands Tab

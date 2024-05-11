@@ -6,6 +6,7 @@ export default partyData = new PogObject("rfuv2", {
         "logOff" : 0,
         'inParty' : false,
         'isLeader' : false,
-        'members' : []
+        'members' : [],
+        'warpExcluded' : []
     }
 }, "data/Chat/partyData.json")

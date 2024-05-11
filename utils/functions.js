@@ -30,3 +30,11 @@ export function checkIfUser(username) {
 export function removeFromArray(array, item) {
     array.splice(array.indexOf(item), 1)
 }
+
+/**
+ * Sends a message in the [RFU] Message format
+ * @param {String} message 
+ */
+export function sendModMessage(message) {
+    ChatLib.chat(`&8&l[&9&lRFU&8&l] ${message}`);
+}

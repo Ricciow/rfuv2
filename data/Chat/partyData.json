@@ -1,9 +1,10 @@
 {
     "blacklist": [],
     "PARTY": {
-        "logOff": 1714788890961,
+        "logOff": 1715464480394,
         "inParty": false,
         "isLeader": false,
-        "members": []
+        "members": [],
+        "warpExcluded": []
     }
 }

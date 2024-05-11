@@ -34,6 +34,9 @@
 		toggle_chat_utils = true
 		toggle_general_utils = true
 
+	[introduction."===_welcome_==="]
+		toggle_load_messages = true
+
 [chat_commands]
 
 	[chat_commands.party_commands]
