@@ -210,15 +210,17 @@ commandManager.addCommand(warpCommand)
 function transfer(name, parameter) {
     if(baseConditions()) {
         if(parameter) {
-            if(partyData.PARTY["members"].includes(parameter)) {
-                ChatLib.command(`pt ${parameter}`);
-            }   
-            else {
-                ChatLib.command(`pc ${parameter} is not in the party!`);
+            if(parameter != playerName) {
+                if(partyData.PARTY["members"].includes(parameter)) {
+                    ChatLib.command(`p transfer ${parameter}`);
+                }   
+                else {
+                    ChatLib.command(`pc ${parameter} is not in the party!`);
+                }
             }
         }
         else {
-            ChatLib.command(`pc Usage: transfer/pt/t <username>`);
+            if(name != playerName) ChatLib.command(`p transfer ${name}`);
         }
     }
 }

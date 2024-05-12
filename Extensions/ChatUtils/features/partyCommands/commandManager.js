@@ -12,6 +12,11 @@ class commandManager {
     constructor() {
         this.commands = [];
         register('chat', (name, message, event) => {
+            if(name.includes(":")) {
+                tempName = name.split(": ");
+                name = tempName.shift();
+                message = tempName.reduce((accumulator, currentValue) => accumulator + currentValue + ": ", "") + message;
+            }
             this.verifyCommand(removeRankTag(name), message)
         }).setCriteria("Party > ${name}: ${message}");
     }
