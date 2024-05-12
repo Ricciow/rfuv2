@@ -4,6 +4,7 @@ if(managerSettings.loadMessages) ChatLib.chat(`&8&l[&9&lRFU&8&l] &c&lLoading...`
 //Chat Imports
 import "./Extensions/ChatUtils/features/partyTracker"
 import "./Extensions/ChatUtils/features/partyCommands/commands";
+import "./Extensions/ChatUtils/features/partyCommands/other"
 //
 
 //Manager Imports

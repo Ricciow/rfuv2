@@ -201,7 +201,15 @@ class ChatSettings {
         category: 'Party Commands',
         subcategory: 'Extras',
     })
-    warpMuted = false;
+    warpMuted = true;
+
+    @SwitchProperty({
+        name: 'Auto rejoin party on togglewarp',
+        description: 'Automatically joins back the party',
+        category: 'Party Commands',
+        subcategory: 'Extras',
+    })
+    autoRejoin = true;
 
     constructor() {
         this.initialize(this);

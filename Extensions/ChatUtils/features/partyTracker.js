@@ -24,23 +24,21 @@ register("chat", (people) => {
     })
 }).setCriteria("You'll be partying with: ${people}");
 
-//[MVP+] Kryze__ was removed from your party because they disconnected.
-
 register("chat", (user) => {
-    partyData.PARTY['members'] = [removeRankTag(user)]
+    if(removeRankTag(user) != playerName) partyData.PARTY['members'] = [removeRankTag(user)]
 }).setCriteria("Party Leader: ${user} ●");
 
 register("chat", (people) => {
     people = people.split(" ● ").map((name) => {return removeRankTag(name)})
     people.forEach((person) => {
-        if(person != "")partyData.PARTY['members'].push(person)    
+        if(person != "" && person != playerName)partyData.PARTY['members'].push(person)    
     })
 }).setCriteria("Party Moderators: ${people}");
 
 register("chat", (people) => {
     people = people.split(" ● ").map((name) => {return removeRankTag(name)})
     people.forEach((person) => {
-        if(person != "")partyData.PARTY['members'].push(person)  
+        if(person != "" && person != playerName)partyData.PARTY['members'].push(person)  
     })
 }).setCriteria("Party Members: ${people}");
 
@@ -74,6 +72,13 @@ register("chat", () => {
     partyData.PARTY['members'] = [];
     partyData.PARTY['warpExcluded'] = [];
 }).setCriteria("You left the party.");
+
+register("chat", () => {
+    partyData.PARTY['inParty'] = false;
+    partyData.PARTY['isLeader'] = false;
+    partyData.PARTY['members'] = [];
+    partyData.PARTY['warpExcluded'] = [];
+}).setCriteria("You have been kicked from the party by ${*}");
 
 register("chat", () => {
     partyData.PARTY['inParty'] = false;
@@ -132,6 +137,11 @@ register("chat", (user) => {
     removeFromArray(partyData.PARTY['members'], removeRankTag(user))
     if(partyData.PARTY['warpExcluded'].includes(removeRankTag(user))) removeFromArray(partyData.PARTY['warpExcluded'], removeRankTag(user));
 }).setCriteria("${user} has left the party.");
+
+register("chat", (user) => {
+    removeFromArray(partyData.PARTY['members'], removeRankTag(user))
+    if(partyData.PARTY['warpExcluded'].includes(removeRankTag(user))) removeFromArray(partyData.PARTY['warpExcluded'], removeRankTag(user));
+}).setCriteria("${user} was removed from your party because they disconnected.");
 
 register("chat", (user) => {
     removeFromArray(partyData.PARTY['members'], removeRankTag(user))

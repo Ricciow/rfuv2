@@ -29,7 +29,7 @@ function baseConditions() {
 }
 
 //-----------------------Help-----------------------\\
-function help(name, parameter) {
+export function help(name, parameter) {
     if(baseConditions()) {
         if(parameter) {
             parameter = parameter.toLowerCase()
@@ -153,7 +153,7 @@ toggleWarpCommand = {
 commandManager.addCommand(toggleWarpCommand)
 //-----------------------Warp-----------------------\\
 let needJoin = [];
-function warp(name) {
+export function warp(name) {
     if(baseConditions()) {
         if(partyData.PARTY['warpExcluded'].length == 0) {
             ChatLib.command('p warp')

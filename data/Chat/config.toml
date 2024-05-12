@@ -7,9 +7,10 @@
 		command_cooldown = 1
 
 	[party_commands.extras]
-		"warp_on_im_muted!" = false
+		"warp_on_im_muted!" = true
 		"●_leader_only_new_member_help" = true
 		new_member_help_command = false
+		auto_rejoin_party_on_togglewarp = true
 
 	[party_commands.commands]
 		help = true
