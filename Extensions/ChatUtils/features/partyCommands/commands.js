@@ -36,36 +36,37 @@ export function help(name, parameter = undefined) {
             parameter = parameter.toLowerCase()
             switch (parameter) {
                 case "help":
-                ChatLib.command(`pc (${parameter}) You are using this already!`);
+                case "h":
+                ChatLib.command(`pc (${parameter}) You are using this already! Triggers: Help, H`);
                 break;
                 case "invite":
                 case "party":
                 case "inv":
                 case "p":
-                ChatLib.command(`pc (${parameter}) Parties someone, usage: invite/inv/party/p <username>`);
+                ChatLib.command(`pc (${parameter}) Parties someone, usage: invite/inv/party/p <username>. Triggers: Invite, Party, Inv, P`);
                 break;
                 case "warp":
                 case "w":
-                ChatLib.command(`pc (${parameter}) Warps the party`);
+                ChatLib.command(`pc (${parameter}) Warps the party. Triggers: Warp, W`);
                 break;
                 case "togglewarp":
                 case "twarp":
                 case "tw":
-                ChatLib.command(`pc (${parameter}) Makes it so you get kicked before the !warp command is triggered.`);
+                ChatLib.command(`pc (${parameter}) Makes it so you get kicked before the !warp command is triggered. Triggers: ToggleWarp, TWarp, Tw`);
                 break;
                 case "transfer":
                 case "t":
                 case "pt":
-                ChatLib.command(`pc (${parameter}) Transfers the party to someone, usage: transfer/pt <username>`);
+                ChatLib.command(`pc (${parameter}) Transfers the party to someone, usage: transfer/pt <username>. Triggers: Transfer, T, Pt`);
                 break;
                 case "allinvite":
                 case "allinv":
                 case "ai":
-                ChatLib.command(`pc (${parameter}) Turns allinvite on.`);
+                ChatLib.command(`pc (${parameter}) Turns allinvite on. Triggers: Allinvite, Allinv, Ai`);
                 break;
                 case "coords":
                 case "c":
-                ChatLib.command(`pc (${parameter}) Sends my current coords, usage: coords/c <username> (optional)`);
+                ChatLib.command(`pc (${parameter}) Sends my current coords, usage: coords/c <username> (optional). Triggers: Coords, C`);
                 break;
                 default:
                 ChatLib.command(`pc (${parameter}) Command not valid!`);
@@ -152,15 +153,32 @@ toggleWarpCommand = {
     "Function": Togglewarp
 }
 
-register("command", (name) => {
-    name = name.toLowerCase()
+register("command", (name, announce) => {
+    if(!name) {
+        sendModMessage("&c&lInvalid Parameter! &f&l/rfutogglewarp (name) (announcement)");
+        return;
+    }
+    name = name?.toLowerCase()
     if(partyData.PARTY['warpExcluded'].includes(name)) {
-        removeFromArray(partyData.PARTY['warpExcluded'], name)
+        removeFromArray(partyData.PARTY['warpExcluded'], name);
         sendModMessage(`&c&lDisabled &f&ltogglewarp for &e&l${name}`);
+        activated = false;
     }
     else {
         partyData.PARTY['warpExcluded'].push(name)
         sendModMessage(`&a&lEnabled &f&ltogglewarp for &e&l${name}`);
+        activated = true;
+    }
+    if(announce) {
+        announce = announce.toLowerCase();
+        if(announce != 'false') {
+            if(activated) ChatLib.command(`pc Togglewarp enabled for ${name}`);
+            else ChatLib.command(`pc Togglewarp disabled for ${name}`);
+        }
+    }
+    else {
+        if(activated) ChatLib.command(`pc Togglewarp enabled for ${name}`);
+            else ChatLib.command(`pc Togglewarp disabled for ${name}`);
     }
 }).setName("rfutogglewarp")
 
