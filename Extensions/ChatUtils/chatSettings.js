@@ -197,7 +197,7 @@ class ChatSettings {
 
     @SwitchProperty({
         name: 'Warp on Im muted!',
-        description: 'Makes it so the im muted message warps the party',
+        description: 'Makes it so the im muted message warps the party (only works with people on party)',
         category: 'Party Commands',
         subcategory: 'Extras',
     })
@@ -210,6 +210,22 @@ class ChatSettings {
         subcategory: 'Extras',
     })
     autoRejoin = true;
+
+    @SwitchProperty({
+        name: 'Prevent Warping on Private Island',
+        description: 'Makes it so !warp doesnt warp if on a priv island',
+        category: 'Party Commands',
+        subcategory: 'Extras',
+    })
+    warpIsland = true;
+
+    @SwitchProperty({
+        name: 'Replace default /p warp command',
+        description: 'Replaces the /p warp command so it follows the same rules as !warp',
+        category: 'Party Commands',
+        subcategory: 'Extras',
+    })
+    customWarp = true;
 
     constructor() {
         this.initialize(this);

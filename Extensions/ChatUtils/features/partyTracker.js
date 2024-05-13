@@ -43,12 +43,13 @@ register("chat", (people) => {
 }).setCriteria("Party Members: ${people}");
 
 register("chat", (user) => {
-    partyData.PARTY['inParty'] = true;
-    if(checkIfUser(user)) {
-        partyData.PARTY['isLeader'] = true;
-        return
+    if(!partyData.PARTY['inParty']) {
+        if(checkIfUser(user)) {
+            partyData.PARTY['isLeader'] = true;
+            return
+        }
     }
-    partyData.PARTY['isLeader'] = false;
+    partyData.PARTY['inParty'] = true;
 }).setCriteria("${user} invited ${*} to the party! They have 60 seconds to accept.");
 
 register("chat", (user) => {

@@ -14,11 +14,9 @@ register('chat', (user) => {
 register('chat', (user) => {
     if(chatSettings.autoRejoin) {
         user = removeRankTag(user)
-        if((Date.now() - UserTime[user]) < 10000) ChatLib.command(`p join ${user}`)
+        if(UserTime[user]) if((Date.now() - UserTime[user]) < 10000) ChatLib.command(`p join ${user}`)
     }
 }).setCriteria("-----------------------------------------------------\n${user} has invited you to join their party!\nYou have 60 seconds to accept. Click here to join!\n-----------------------------------------------------")
-
-//From [MVP++] Jenyk: Hey! I'm currently muted and am unable to message right now.
 
 register("chat", (user, message) => {
     if(user.includes(":")) {
@@ -34,3 +32,8 @@ register("chat", (user, message) => {
     }
 }).setCriteria("From ${user}: ${message}")
 
+
+register("chat", (user) => {
+    if(!chatSettings.joinHelp || (chatSettings.joinHelpLeader && !partyData.PARTY['isLeader'])) return
+    help(removeRankTag(user))
+}).setCriteria("${user} joined the party.");

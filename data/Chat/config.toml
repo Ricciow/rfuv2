@@ -10,7 +10,9 @@
 		"warp_on_im_muted!" = true
 		"●_leader_only_new_member_help" = true
 		new_member_help_command = false
+		"replace_default_/p_warp_command" = true
 		auto_rejoin_party_on_togglewarp = true
+		prevent_warping_on_private_island = true
 
 	[party_commands.commands]
 		help = true

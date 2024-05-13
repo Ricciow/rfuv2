@@ -16,7 +16,7 @@ class Skyblock {
         })
         
         register("chat", (event) => {
-            cancel(event)
+            if(!this.foundLoc) cancel(event)
             this.foundLoc = true;
             this.lobbyData = JSON.parse(ChatLib.getChatMessage(event, false));
             this._runOnData();
@@ -30,7 +30,23 @@ class Skyblock {
     get lobby() {
         return this.lobbyData?.server
     }
+
+    get map() {
+        return this.lobbyData?.map
+    }
     
+    _PlayerCountTexts() {
+        PlayerCountTexts = TabList.getNames().filter(name => {
+            if((/(Players|Guests|Party) \(\d+\)/).test(name.removeFormatting())) return true;
+            return false;
+        });
+        return PlayerCountTexts
+    }
+
+    get playerCount() {
+        return parseInt((/\d+/).exec(this._PlayerCountTexts()[0].removeFormatting()))
+    }
+
     _runOnData() {
         this.functions.forEach(func => func());
         this.onetime.forEach(func => func());

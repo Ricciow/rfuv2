@@ -12,6 +12,7 @@ import moduleData from "./data/Manager/moduleData";
 metadata = JSON.parse(FileLib.read("rfuv2", 'metadata.json'))
 //Utils Imports
 import { sendModMessage } from "./utils/functions";
+import skyblock from "./utils/skyblock";
 
 const extensions = {
     "chat": managerSettings.openChatUtils,

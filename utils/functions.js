@@ -16,9 +16,7 @@ export function removeRankTag(username) {
  * @returns {boolean}
  */
 export function checkIfUser(username) {
-    if(rankTagRegex.test(username)) {
-        username = removeRankTag(username)
-    }
+    username = removeRankTag(username)
     if(username == playerName) return true
     return false
 }

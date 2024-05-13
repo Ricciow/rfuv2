@@ -1,15 +1,16 @@
 import commandManager from "./commandManager";
 import chatSettings from "../../chatSettings";
 import partyData from "../../../../data/Chat/partyData";
-import { removeFromArray, removeRankTag } from "../../../../utils/functions";
+import { removeFromArray, removeRankTag, sendModMessage } from "../../../../utils/functions";
 import { playerName } from "../../../../utils/constants";
+import skyblock from "../../../../utils/skyblock";
 
 // function test(name, params) {
 //     ChatLib.chat(`I'm a command! ${params}`)
 // }
 
 // exampleCommand = {
-//     "Triggers": ["test1"],      //All triggers for the command
+//     "Triggers": ["test1"],      //All triggers for the command (must be lowercased)
 //     "parameters": 1,            //Number of parameters for command
 //     "LeaderOnly": false,        //Self explanatory
 //     "MemberOnly": false,        //Self explanatory
@@ -29,7 +30,7 @@ function baseConditions() {
 }
 
 //-----------------------Help-----------------------\\
-export function help(name, parameter) {
+export function help(name, parameter = undefined) {
     if(baseConditions()) {
         if(parameter) {
             parameter = parameter.toLowerCase()
@@ -129,6 +130,7 @@ commandManager.addCommand(inviteCommand)
 
 //-----------------------ToggleWarp-----------------------\\
 function Togglewarp(name) {
+    name = name.toLowerCase();
     if(baseConditions()) {
         if(partyData.PARTY['warpExcluded'].includes(name)) {
             removeFromArray(partyData.PARTY['warpExcluded'], name)
@@ -150,57 +152,105 @@ toggleWarpCommand = {
     "Function": Togglewarp
 }
 
+register("command", (name) => {
+    name = name.toLowerCase()
+    if(partyData.PARTY['warpExcluded'].includes(name)) {
+        removeFromArray(partyData.PARTY['warpExcluded'], name)
+        sendModMessage(`&c&lDisabled &f&ltogglewarp for &e&l${name}`);
+    }
+    else {
+        partyData.PARTY['warpExcluded'].push(name)
+        sendModMessage(`&a&lEnabled &f&ltogglewarp for &e&l${name}`);
+    }
+}).setName("rfutogglewarp")
+
 commandManager.addCommand(toggleWarpCommand)
 //-----------------------Warp-----------------------\\
+let ignoreNext = false;
+function warpParty() {
+    ignoreNext = true;
+    ChatLib.command('p warp')
+}
+
 let needJoin = [];
-export function warp(name) {
+let lastSelfTrigger = false;
+export function warp(name, ignoreConditions = false) {
+    if(name == playerName && !lastSelfTrigger && !ignoreConditions) {
+        lastSelfTrigger = true;
+        ChatLib.chat(new Message("&c&lAre you sure? (You're leader) ", new TextComponent("&a&l[Warp]").setClickAction("run_command").setClickValue("/rfuconfirmwarp").setHoverAction('show_text').setHoverValue("Click to warp.")));
+        setTimeout(() => {
+            lastSelfTrigger = false;
+        }, 10000);
+        return
+    }
+    lastSelfTrigger = false;
     if(baseConditions()) {
-        if(partyData.PARTY['warpExcluded'].length == 0) {
-            ChatLib.command('p warp')
+        if(skyblock.map != 'Private Island' || !chatSettings.warpIsland || ignoreConditions) {
+            if(partyData.PARTY['warpExcluded'].length == 0) {
+                warpParty()
+            }
+            else {
+                timeout = 0
+                partyData.PARTY['warpExcluded'].forEach(person => {
+                    needJoin.push(person)
+                    setTimeout(() => {
+                        ChatLib.command(`p kick ${person}`)
+                    }, timeout);
+                    timeout += 500;
+                });
+                partyData.PARTY['warpExcluded'] = []
+                setTimeout(() => {
+                    warpParty()
+                }, timeout);
+                timeout += 500
+                needJoin.forEach(person => {
+                    setTimeout(() => {
+                        ChatLib.command(`p ${person}`)
+                    }, timeout);
+                    timeout += 500;
+                });
+            }
         }
         else {
-            timeout = 0
-            partyData.PARTY['warpExcluded'].forEach(person => {
-                needJoin.push(person)
-                setTimeout(() => {
-                    ChatLib.command(`p kick ${person}`)
-                }, timeout);
-                timeout += 500;
-            });
-            setTimeout(() => {
-                ChatLib.command(`p warp`)
-            }, timeout);
-            timeout += 500
-            needJoin.forEach(person => {
-                setTimeout(() => {
-                    ChatLib.command(`p ${person}`)
-                }, timeout);
-                timeout += 500;
-            });
+            ChatLib.command("pc I'm currently on a private island! (Not Warping)")
         }
     }
 }
 
 register("chat", (user) => {
-    user = removeRankTag(user);
+    user = removeRankTag(user).toLowerCase();
     if(needJoin.includes(user)) {
         removeFromArray(needJoin, user)
     }
 }).setCriteria("The party invite to ${user} has expired.");
 
 register("chat", (user) => {
-    user = removeRankTag(user);
+    user = removeRankTag(user).toLowerCase();
     if(needJoin.includes(user)) {
         removeFromArray(needJoin, user)
+        partyData.PARTY['warpExcluded'].push(user)
     }
 }).setCriteria("${user} joined the party.");
+
+register('command', () => {
+    warp(playerName, true)
+}).setName("rfuconfirmwarp")
+
+register('messageSent', (message, event) => {
+    if((message.startsWith("/p warp") || message.startsWith("/party warp")) && chatSettings.customWarp && !ignoreNext) {
+        cancel(event)
+        warp(playerName, true);
+        return
+    }
+    ignoreNext = false;
+})
 
 warpCommand = {
     "Triggers": ["warp", "w"],      
     "parameters": 0,            
     "LeaderOnly": true,        
     "MemberOnly": false,        
-    "SelfTrigger": false,       
+    "SelfTrigger": true,       
     "Function": warp
 }
 
