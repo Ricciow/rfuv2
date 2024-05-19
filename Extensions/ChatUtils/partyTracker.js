@@ -1,8 +1,8 @@
 //This code is responsible for tracking the party joins/leave/transfers etc.
 
-import partyData from "../../../data/Chat/partyData";
-import { checkIfUser, removeFromArray, removeRankTag } from "../../../utils/functions";
-import { playerName } from "../../../utils/constants";
+import { partyData }  from "../../data/Chat/chatData";
+import { checkIfUser, removeFromArray, removeRankTag } from "../../utils/functions";
+import { playerName } from "../../utils/constants";
 
 register("chat", () => {
     partyData.PARTY['inParty'] = true;

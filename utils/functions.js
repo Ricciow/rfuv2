@@ -36,3 +36,16 @@ export function removeFromArray(array, item) {
 export function sendModMessage(message) {
     ChatLib.chat(`&8&l[&9&lRFU&8&l] ${message}`);
 }
+
+/**
+ * Makes a regExp that detects if any item on the array is present
+ * @param {String[]} array - The array that will be converted 
+ * @returns {RegExp}
+ */
+export function makeRegexFromArray(array, flags = '') {
+    return new RegExp(array
+        .map(s => s.replace(/[()[\]{}*+?^$|#.,\/\\\s-]/g, "\\$&"))
+        .join("|"), 
+        flags
+    );
+}

@@ -1,6 +1,7 @@
 import commandManager from "./commandManager";
 import chatSettings from "../../chatSettings";
-import partyData from "../../../../data/Chat/partyData";
+import managerSettings from "../../../../Manager/managerSettings";
+import { partyData }  from "../../../../data/Chat/chatData";
 import { removeFromArray, removeRankTag, sendModMessage } from "../../../../utils/functions";
 import { playerName } from "../../../../utils/constants";
 import skyblock from "../../../../utils/skyblock";
@@ -102,10 +103,15 @@ helpCommand = {
 commandManager.addCommand(helpCommand)
 
 //-----------------------Invite-----------------------\\
+const ParamFilter = ["accept", "chat", "demote", "disband", "invite", "kick", "kickoffline", "leave", "list", "mute", "poll", "private", "promote", "settings", "transfer", "warp"];
 function invite(name, parameter) {
     if(baseConditions()) {
         if(parameter) {
-            if(!partyData.PARTY["members"].includes(parameter)) {
+            if(ParamFilter.includes(parameter.toLowerCase())) {
+                ChatLib.command("pc You're not allowed to do that! >:(")
+                return
+            }
+            if(!partyData.PARTY["members"].map((player) => player.toLowerCase()).includes(parameter.toLowerCase())) {
                 ChatLib.command(`p ${parameter}`);
             }   
             else {
@@ -154,31 +160,37 @@ toggleWarpCommand = {
 }
 
 register("command", (name, announce) => {
+    if(!managerSettings.chatUtils) return
     if(!name) {
         sendModMessage("&c&lInvalid Parameter! &f&l/rfutogglewarp (name) (announcement)");
         return;
     }
     name = name?.toLowerCase()
-    if(partyData.PARTY['warpExcluded'].includes(name)) {
-        removeFromArray(partyData.PARTY['warpExcluded'], name);
-        sendModMessage(`&c&lDisabled &f&ltogglewarp for &e&l${name}`);
-        activated = false;
-    }
-    else {
-        partyData.PARTY['warpExcluded'].push(name)
-        sendModMessage(`&a&lEnabled &f&ltogglewarp for &e&l${name}`);
-        activated = true;
-    }
-    if(announce) {
-        announce = announce.toLowerCase();
-        if(announce != 'false') {
+    if(partyData.PARTY['inParty']) {
+        if(partyData.PARTY['warpExcluded'].includes(name)) {
+            removeFromArray(partyData.PARTY['warpExcluded'], name);
+            sendModMessage(`&c&lDisabled &f&ltogglewarp for &e&l${name}`);
+            activated = false;
+        }
+        else {
+            partyData.PARTY['warpExcluded'].push(name)
+            sendModMessage(`&a&lEnabled &f&ltogglewarp for &e&l${name}`);
+            activated = true;
+        }
+        if(announce) {
+            announce = announce.toLowerCase();
+            if(announce != 'false') {
+                if(activated) ChatLib.command(`pc Togglewarp enabled for ${name}`);
+                else ChatLib.command(`pc Togglewarp disabled for ${name}`);
+            }
+        }
+        else {
             if(activated) ChatLib.command(`pc Togglewarp enabled for ${name}`);
-            else ChatLib.command(`pc Togglewarp disabled for ${name}`);
+                else ChatLib.command(`pc Togglewarp disabled for ${name}`);
         }
     }
     else {
-        if(activated) ChatLib.command(`pc Togglewarp enabled for ${name}`);
-            else ChatLib.command(`pc Togglewarp disabled for ${name}`);
+        sendModMessage("&cYou're not on a party!")
     }
 }).setName("rfutogglewarp")
 
@@ -251,10 +263,12 @@ register("chat", (user) => {
 }).setCriteria("${user} joined the party.");
 
 register('command', () => {
+    if(!managerSettings.chatUtils) return
     warp(playerName, true)
 }).setName("rfuconfirmwarp")
 
 register('messageSent', (message, event) => {
+    if(!managerSettings.chatUtils) return
     if((message.startsWith("/p warp") || message.startsWith("/party warp")) && chatSettings.customWarp && !ignoreNext) {
         cancel(event)
         warp(playerName, true);
@@ -279,7 +293,7 @@ function transfer(name, parameter) {
     if(baseConditions()) {
         if(parameter) {
             if(parameter != playerName) {
-                if(partyData.PARTY["members"].includes(parameter)) {
+                if(partyData.PARTY["members"].map((player) => player.toLowerCase()).includes(parameter.toLowerCase())) {
                     ChatLib.command(`p transfer ${parameter}`);
                 }   
                 else {

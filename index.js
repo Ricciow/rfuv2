@@ -2,9 +2,10 @@ import managerSettings from "./Manager/managerSettings";
 if(managerSettings.loadMessages) ChatLib.chat(`&8&l[&9&lRFU&8&l] &c&lLoading...`);
 
 //Chat Imports
-import "./Extensions/ChatUtils/features/partyTracker"
+import "./Extensions/ChatUtils/partyTracker"
 import "./Extensions/ChatUtils/features/partyCommands/commands";
 import "./Extensions/ChatUtils/features/partyCommands/other"
+import "./Extensions/ChatUtils/features/chat"
 //
 
 //Manager Imports
@@ -12,7 +13,6 @@ import moduleData from "./data/Manager/moduleData";
 metadata = JSON.parse(FileLib.read("rfuv2", 'metadata.json'))
 //Utils Imports
 import { sendModMessage } from "./utils/functions";
-import skyblock from "./utils/skyblock";
 
 const extensions = {
     "chat": managerSettings.openChatUtils,

@@ -24,21 +24,23 @@ import {
     UIContainer,
     UIWrappedText
 } from "../../../Elementa";
+
+import { chatData }  from "../../data/Chat/chatData"
+import DoubleInputWindow from "../../utils/InputWindows/doubleInputWindow";
+
 const Color = Java.type("java.awt.Color");
 
-import { partyData }  from "../../data/Chat/chatData"
-import SingleInputWindow from "../../utils/InputWindows/singleInputWindow";
+class ReplacementListWindow extends DoubleInputWindow{
 
-class BlackListWindow extends SingleInputWindow{
     constructor() {
-        values = partyData["blacklist"] ? partyData["blacklist"] : {};
+        values = chatData["replacements"] ? chatData["replacements"] : {};
         super(values)
     }
 
     saveFunction() {
-        partyData["blacklist"] = this.inputs
-        partyData.save()
+        chatData["replacements"] = this.inputs
+        chatData.save()
     }
 }
 
-export default new BlackListWindow()
+export default new ReplacementListWindow()

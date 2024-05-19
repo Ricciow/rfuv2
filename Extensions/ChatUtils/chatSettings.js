@@ -14,10 +14,11 @@ import {
 } from "../../../Vigilance";
 
 import BlackListWindow from "./blacklistWindow";
+import chatReplacementWindow from "./chatReplacementWindow";
 
 @Vigilant('rfuv2/data/Chat', 'RiccioFishingUtils V2.0.0', {
     getCategoryComparator: () => (a, b) => {
-        const categories = ['Navigation', 'Party Commands', 'Information Commands', 'Hiding'];
+        const categories = ['Navigation', 'Party Commands', 'Chat Utilities', 'Hiding'];
 
         return categories.indexOf(a.name) - categories.indexOf(b.name);
     }
@@ -226,6 +227,17 @@ class ChatSettings {
         subcategory: 'Extras',
     })
     customWarp = true;
+
+    @ButtonProperty({
+        name: 'Text replacements',
+        description: 'Text that will be replaced when you send a message! left side is what will be replaced, right side is what it is replaced by',
+        category: 'Chat Utilities',
+        subcategory: 'Your Messages',
+        placeholder: "Modify"
+    })
+    openReplacementGui() {
+        chatReplacementWindow.setSettingsGui(this).open()
+    }
 
     constructor() {
         this.initialize(this);

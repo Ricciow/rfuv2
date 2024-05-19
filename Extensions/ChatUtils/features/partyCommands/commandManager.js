@@ -1,5 +1,6 @@
 import chatSettings from "../../chatSettings";
-import partyData from "../../../../data/Chat/partyData";
+import managerSettings from "../../../../Manager/managerSettings";
+import { partyData } from "../../../../data/Chat/chatData";
 import { removeRankTag } from "../../../../utils/functions"
 import { playerName } from "../../../../utils/constants";
 
@@ -12,6 +13,7 @@ class commandManager {
     constructor() {
         this.commands = [];
         register('chat', (name, message, event) => {
+            if(!managerSettings.chatUtils) return
             if(name.includes(":")) {
                 tempName = name.split(": ");
                 name = tempName.shift();
