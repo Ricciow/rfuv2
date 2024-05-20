@@ -228,6 +228,14 @@ class ChatSettings {
     })
     customWarp = true;
 
+    @SwitchProperty({
+        name: 'Enable Text Replacements',
+        description: 'Allows you to make words get switched when you send a message',
+        category: 'Chat Utilities',
+        subcategory: 'Your Messages'
+    })
+    chatReplacements = true;
+
     @ButtonProperty({
         name: 'Text replacements',
         description: 'Text that will be replaced when you send a message! left side is what will be replaced, right side is what it is replaced by',
@@ -242,6 +250,7 @@ class ChatSettings {
     constructor() {
         this.initialize(this);
         this.addDependency("● Leader Only New Member Help", "New Member Help Command");
+        this.addDependency("Text replacements", "Enable Text Replacements");
     }
 }
 

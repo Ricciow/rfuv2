@@ -49,3 +49,19 @@ export function makeRegexFromArray(array, flags = '') {
         flags
     );
 }
+
+/**
+ * Makes a regExp that detects if any item on the array is present with whitespaces or start/end around it
+ * @param {String[]} array - The array that will be converted 
+ * @returns {RegExp}
+ */
+export function makeSpacedRegexFromArray(array, flags = '') {
+    return new RegExp(
+        '(^|\\s)('+
+        array
+        .map(s => s.replace(/[()[\]{}*+?^$|#.,\/\\\s-]/g, "\\$&"))
+        .join("|")
+        +")(?=$|\\s)", 
+        flags
+    );
+}
