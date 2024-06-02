@@ -6,7 +6,7 @@ import chatSettings from "../chatSettings";
 const Chats = ["/ac", "/pc", "/gc", "/oc", "/cc", "/r ", "/w "]
 let lastMsg = undefined
 register('messageSent', (message, event) => {
-    if(!managerSettings.chatUtils && !chatSettings.chatReplacements) return
+    if(!managerSettings.chatUtils || !chatSettings.chatReplacements) return
     if(lastMsg == message) return
     if(message.startsWith('/') && !Chats.includes(message.substring(0,3))) return
     cancel(event);
