@@ -59,7 +59,7 @@ export class textElementVanilla extends guiElement {
         if(textColor.constructor === Array) textColor = new Color(textColor[0], textColor[1], textColor[2], textColor[3])
         this.color = textColor
 
-        this.UIText = new UIvanillaText() 
+        this.UIText = new UIVanillaText() 
         .setText(this.text)
         .setWidth((100).percent())
         .setChildOf(this.boundingBox)
