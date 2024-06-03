@@ -1,34 +1,8 @@
-import {
-    AdditiveConstraint,
-    animate,
-    Animations,
-    CenterConstraint,
-    ChildBasedMaxSizeConstraint,
-    ChildBasedSizeConstraint,
-    ConstantColorConstraint,
-    FillConstraint,
-    ScissorEffect,
-    SiblingConstraint,
-    SubtractiveConstraint,
-    UIBlock,
-    UIMultilineTextInput,
-    UIText,
-    WindowScreen,
-    MarkdownComponent,
-    Inspector,
-    UITextInput,
-    RelativeWindowConstraint,
-    RelativeConstraint,
-    UIRoundedRectangle,
-    ScrollComponent,
-    UIContainer,
-    UIWrappedText,
-    TextAspectConstraint
-} from "../../../../Elementa";
-import { guiElement } from "./guiElement";
+import { UIText, TextAspectConstraint } from "../../../../Elementa";
+import { GuiElement } from "./guiElement";
 const Color = Java.type("java.awt.Color");
 
-export class textElement extends guiElement {
+export class TextElement extends GuiElement {
 
     /**
      * Your fun text element to render stuff on screen :O
@@ -40,8 +14,8 @@ export class textElement extends guiElement {
      * @param {str} text 
      * @param {Color|float[]} textColor 
      */
-    constructor(saveKey, defaultX = 0, defaultY = 0, width = 20, height = 4, text = '', textColor = new Color(1,1,1,1)) {
-        super(saveKey, defaultX, defaultY, width, height, 'x')
+    constructor(saveKey, defaultX = 0, defaultY = 0, width = 20, text = '', textColor = new Color(1,1,1,1)) {
+        super(saveKey, defaultX, defaultY, width, 10, 'x')
 
         this.text = text
         if(textColor.constructor === Array) textColor = new Color(textColor[0], textColor[1], textColor[2], textColor[3])
