@@ -1,5 +1,5 @@
 import { UIText, TextAspectConstraint } from "../../../../Elementa";
-import { GuiElement } from "./guiElement";
+import { GuiElement } from "./GuiElement";
 const Color = Java.type("java.awt.Color");
 
 export class TextElement extends GuiElement {
