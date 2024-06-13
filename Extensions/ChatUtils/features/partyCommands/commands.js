@@ -18,7 +18,6 @@ import skyblock from "../../../../utils/skyblock";
 //     "SelfTrigger": false,       //Trigger the command on self, will delay the command a bit
 //     "Function": test            //Function ran when command triggered will send (name, parameters) 
 // }                               //(only sends parameters if parameters has atleast 1, also only sends the ammount defined above) 
-//                                 //(sends em in array form if more than 1)
 
 // commandManager.addCommand(exampleCommand);
 
@@ -32,7 +31,7 @@ function baseConditions() {
 
 //-----------------------Help-----------------------\\
 export function help(name, parameter = undefined) {
-    if(baseConditions()) {
+    if(baseConditions() && chatSettings.help) {
         if(parameter) {
             parameter = parameter.toLowerCase()
             switch (parameter) {
@@ -69,8 +68,12 @@ export function help(name, parameter = undefined) {
                 case "c":
                 ChatLib.command(`pc (${parameter}) Sends my current coords, usage: coords/c <username> (optional). Triggers: Coords, C`);
                 break;
+                case "pick":
+                case "choose":
+                ChatLib.command(`pc (${parameter}) Picks one of the things provided, usage: pick/choose <choices...>. Triggers: Pick, Choose`);
+                break;
                 default:
-                ChatLib.command(`pc (${parameter}) Command not valid!`);
+                ChatLib.command(`pc (${parameter}) Invalid command!`);
             }
         }
         else {
@@ -85,6 +88,7 @@ export function help(name, parameter = undefined) {
                 if(chatSettings.allinvite) commands.push("Allinvite");
             }
             if(chatSettings.coords) commands.push("Coords");
+            if(chatSettings.pick) commands.push("Pick")
             message = `${name}, commands available: ${commands.join(", ")}`;
             ChatLib.command(`pc ${message}`);
         }
@@ -104,8 +108,8 @@ commandManager.addCommand(helpCommand)
 
 //-----------------------Invite-----------------------\\
 const ParamFilter = ["accept", "chat", "demote", "disband", "invite", "kick", "kickoffline", "leave", "list", "mute", "poll", "private", "promote", "settings", "transfer", "warp"];
-function invite(name, parameter) {
-    if(baseConditions()) {
+function invite(_name, parameter) {
+    if(baseConditions() && chatSettings.invite) {
         if(parameter) {
             if(ParamFilter.includes(parameter.toLowerCase())) {
                 ChatLib.command("pc You're not allowed to do that! >:(")
@@ -138,7 +142,7 @@ commandManager.addCommand(inviteCommand)
 //-----------------------ToggleWarp-----------------------\\
 function Togglewarp(name) {
     name = name.toLowerCase();
-    if(baseConditions()) {
+    if(baseConditions() && chatSettings.toggleWarp) {
         if(partyData.PARTY['warpExcluded'].includes(name)) {
             removeFromArray(partyData.PARTY['warpExcluded'], name)
             ChatLib.command("pc You can now be warped.")
@@ -205,7 +209,7 @@ function warpParty() {
 let needJoin = [];
 let lastSelfTrigger = false;
 export function warp(name, ignoreConditions = false) {
-    if(name == playerName && !lastSelfTrigger && !ignoreConditions) {
+    if(name == playerName && !lastSelfTrigger && !ignoreConditions && chatSettings.warp) {
         lastSelfTrigger = true;
         ChatLib.chat(new Message("&c&lAre you sure? (You're leader) ", new TextComponent("&a&l[Warp]").setClickAction("run_command").setClickValue("/rfuconfirmwarp").setHoverAction('show_text').setHoverValue("Click to warp.")));
         setTimeout(() => {
@@ -214,7 +218,7 @@ export function warp(name, ignoreConditions = false) {
         return
     }
     lastSelfTrigger = false;
-    if(baseConditions()) {
+    if(baseConditions() && chatSettings.warp) {
         if(skyblock.map != 'Private Island' || !chatSettings.warpIsland || ignoreConditions) {
             if(partyData.PARTY['warpExcluded'].length == 0) {
                 warpParty()
@@ -290,7 +294,7 @@ commandManager.addCommand(warpCommand)
 
 //-----------------------Transfer-----------------------\\
 function transfer(name, parameter) {
-    if(baseConditions()) {
+    if(baseConditions() && chatSettings.transfer) {
         if(parameter) {
             if(parameter != playerName) {
                 if(partyData.PARTY["members"].map((player) => player.toLowerCase()).includes(parameter.toLowerCase())) {
@@ -319,8 +323,8 @@ transferCommand = {
 commandManager.addCommand(transferCommand)
 
 //-----------------------AllInvite-----------------------\\
-function allinvite(name) {
-    if(baseConditions()) {
+function allinvite(_name) {
+    if(baseConditions() && chatSettings.allinvite) {
         ChatLib.command('p settings allinvite')
     }
 }
@@ -337,8 +341,8 @@ allinviteCommand = {
 commandManager.addCommand(allinviteCommand)
 
 //-----------------------Coords-----------------------\\
-function coords(name, parameter) {
-    if(baseConditions()) {
+function coords(_name, parameter) {
+    if(baseConditions() && chatSettings.coords) {
         if(parameter) if(parameter != playerName) return
         ChatLib.command(`pc x: ${Math.round(Player.getX())}, y: ${Math.round(Player.getY())}, z: ${Math.round(Player.getZ())}`)
     }
@@ -354,3 +358,22 @@ coordsCommand = {
 }
 
 commandManager.addCommand(coordsCommand)
+
+//-----------------------Pick-----------------------\\
+
+function pick(_name, ...options) {
+    if(baseConditions() && chatSettings.pick) {
+        ChatLib.command(`pc ${options[Math.floor(Math.random() * options.length)]}`);
+    }
+}
+
+pickCommand = {
+    "Triggers": ["pick", "choose"],      
+    "parameters": -1,            
+    "LeaderOnly": false,        
+    "MemberOnly": false,        
+    "SelfTrigger": true,       
+    "Function": pick
+}
+
+commandManager.addCommand(pickCommand)

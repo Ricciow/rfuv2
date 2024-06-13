@@ -180,6 +180,14 @@ class ChatSettings {
     })
     coords = true;
 
+    @CheckboxProperty({
+        name: 'pick',
+        description: 'Enable the pick command',
+        category: 'Party Commands',
+        subcategory: 'Commands',
+    })
+    pick = true;
+
     @SwitchProperty({
         name: 'New Member Help Command',
         description: 'Runs the help command whenever a new player joins',

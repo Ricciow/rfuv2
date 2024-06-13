@@ -22,6 +22,7 @@
 	[party_commands.commands]
 		help = true
 		transfer = true
+		pick = true
 		allinvite = true
 		invite = true
 		togglewarp = true

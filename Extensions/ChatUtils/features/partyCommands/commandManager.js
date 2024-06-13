@@ -55,10 +55,13 @@ class commandManager {
                         //Verify parameters
                         if(command.parameters > 0) {
                             if(command.parameters == 1) command.Function(name, parameters[0]);
-                            else command.Function(name, parameters.slice(0, command.parameters));
+                            else command.Function(name, ...parameters.slice(0, command.parameters));
+                        }
+                        else if(command.parameters != -1){
+                            command.Function(name);
                         }
                         else {
-                            command.Function(name);
+                            command.Function(name, ...parameters);
                         }
                     }         
                 }, timeout);
