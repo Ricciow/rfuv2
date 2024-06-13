@@ -1,12 +1,6 @@
 {
-  "name": "rfuv2",
+  "name": "teste",
   "creator": "Riccio",
   "entry": "index.js",
-  "version": "0.0.1",
-  "requires": [
-    "PogData",
-    "Vigilance",
-    "RenderLib",
-    "Elementa"
-  ]
+  "version": "0.0.1"
 }
