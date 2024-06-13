@@ -4,7 +4,7 @@ import { invisibleColor } from "../../constants";
 const Color = Java.type("java.awt.Color");
 import guiManager from "../guiManager";
 
-export class guiElement {
+export class GuiElement {
     /**
      * Your basic guiElement
      * @param {str} saveKey the key where the x, y and scale will be saved at

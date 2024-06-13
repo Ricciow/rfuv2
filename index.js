@@ -13,8 +13,7 @@ import moduleData from "./data/Manager/moduleData";
 metadata = JSON.parse(FileLib.read("rfuv2", 'metadata.json'))
 //Utils Imports
 import { sendModMessage } from "./utils/functions";
-import { textElement } from "./utils/gui/elements/textElement";
-import { textElementVanilla } from "./utils/gui/elements/textElementVanilla";
+import { PetDisplayElement } from "./utils/gui/elements/PetDisplayElement";
 
 const extensions = {
     "chat": managerSettings.openChatUtils,
@@ -50,4 +49,4 @@ else if(moduleData.version != metadata.version) {
 moduleData.version = metadata.version;
 moduleData.save();
 
-a = new textElementVanilla('test', 0,0,20,20,'&b&lTest\npeepeepoopoo\nhahahaahhahaahhaha', [1,1,1,1])
+a = new PetDisplayElement('test', 0, 0)

@@ -1,46 +1,22 @@
-import {
-    AdditiveConstraint,
-    animate,
-    Animations,
-    CenterConstraint,
-    ChildBasedMaxSizeConstraint,
-    ChildBasedSizeConstraint,
-    ConstantColorConstraint,
-    FillConstraint,
-    ScissorEffect,
-    SiblingConstraint,
-    SubtractiveConstraint,
-    UIBlock,
-    UIMultilineTextInput,
-    UIText,
-    WindowScreen,
-    MarkdownComponent,
-    Inspector,
-    UITextInput,
-    RelativeWindowConstraint,
-    RelativeConstraint,
-    UIRoundedRectangle,
-    ScrollComponent,
-    UIContainer,
-    UIWrappedText,
-    TextAspectConstraint
-} from "../../../../Elementa";
-import { guiElement } from "./guiElement";
+import { UIText } from "../../../../Elementa";
+import { GuiElement } from "./GuiElement";
 const Color = Java.type("java.awt.Color");
 
 function UIVanillaText() {
     return new JavaAdapter(UIText, {
         draw() {
+            Tessellator.pushMatrix()
             let text = new Text(this.getText()).setShadow(this.getShadow())
             LongestLine = Math.max(...text.getLines().map((line) => Renderer.getStringWidth(line)))
             text.setScale(this.getWidth()/LongestLine)
             text.draw(this.getLeft(), this.getTop())
             this.setHeight(text.getHeight().pixels())
+            Tessellator.popMatrix()
         }
     });
 }
 
-export class textElementVanilla extends guiElement {
+export class VanillaTextElement extends GuiElement {
 
     /**
      * Your fun text element with vanilla color codes to render stuff on screen :O
@@ -52,12 +28,10 @@ export class textElementVanilla extends guiElement {
      * @param {str} text 
      * @param {Color|float[]} textColor 
      */
-    constructor(saveKey, defaultX = 0, defaultY = 0, width = 20, height = 4, text = '', textColor = new Color(1,1,1,1)) {
-        super(saveKey, defaultX, defaultY, width, height, 'x')
+    constructor(saveKey, defaultX = 0, defaultY = 0, width = 20, text = '') {
+        super(saveKey, defaultX, defaultY, width, 10, 'x')
 
         this.text = text
-        if(textColor.constructor === Array) textColor = new Color(textColor[0], textColor[1], textColor[2], textColor[3])
-        this.color = textColor
 
         this.UIText = new UIVanillaText() 
         .setText(this.text)
