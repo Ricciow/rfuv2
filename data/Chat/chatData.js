@@ -56,5 +56,6 @@ export var chatData = new PogObject("rfuv2", {
         ":dj:":"ヽ(⌐■_■)ノ♬",
         ":fish:":"<°)))><",
         ":amogus:":"ඞ"
-    }
+    },
+    "hide": []
 }, "data/Chat/chatData.json")

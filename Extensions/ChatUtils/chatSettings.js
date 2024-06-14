@@ -14,6 +14,7 @@ import {
 } from "../../../Vigilance";
 
 import BlackListWindow from "./blacklistWindow";
+import chatRemovalWindow from "./chatRemovalWindow";
 import chatReplacementWindow from "./chatReplacementWindow";
 
 @Vigilant('rfuv2/data/Chat', 'RiccioFishingUtils V2.0.0', {
@@ -255,10 +256,30 @@ class ChatSettings {
         chatReplacementWindow.setSettingsGui(this).open()
     }
 
+    @SwitchProperty({
+        name: 'Enable Text Hiders',
+        description: 'Hides the text messages set on here',
+        category: 'Chat Utilities',
+        subcategory: 'All Messages'
+    })
+    chatHiders = false;
+
+    @ButtonProperty({
+        name: 'Hidden texts',
+        description: 'Texts that will be hidden',
+        category: 'Chat Utilities',
+        subcategory: 'All Messages',
+        placeholder: "Modify"
+    })
+    openHiderGui() {
+        chatRemovalWindow.setSettingsGui(this).open()
+    }
+
     constructor() {
         this.initialize(this);
         this.addDependency("● Leader Only New Member Help", "New Member Help Command");
         this.addDependency("Text replacements", "Enable Text Replacements");
+        this.addDependency("Hidden texts", "Enable Text Hiders");
     }
 }
 

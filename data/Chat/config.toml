@@ -4,6 +4,9 @@
 	[chat_utilities.your_messages]
 		enable_text_replacements = false
 
+	[chat_utilities.all_messages]
+		enable_text_hiders = false
+
 [party_commands]
 
 	[party_commands."==_configuration_=="]

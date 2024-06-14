@@ -1,3 +1,5 @@
+import SingleInputWindow from "../../utils/InputWindows/singleInputWindow";
+
 import {
     AdditiveConstraint,
     animate,
@@ -26,21 +28,20 @@ import {
 } from "../../../Elementa";
 
 import { chatData }  from "../../data/Chat/chatData"
-import DoubleInputWindow from "../../utils/InputWindows/doubleInputWindow";
 
 const Color = Java.type("java.awt.Color");
 
-class ReplacementListWindow extends DoubleInputWindow{
+class RemovalListWindow extends SingleInputWindow{
 
     constructor() {
-        values = chatData["replacements"] ?? {};
+        values = chatData["hide"] ?? [];
         super(values)
     }
 
     saveFunction() {
-        chatData["replacements"] = this.inputs
+        chatData["hide"] = this.inputs
         chatData.save()
     }
 }
 
-export default new ReplacementListWindow()
+export default new RemovalListWindow()

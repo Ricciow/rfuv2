@@ -363,7 +363,7 @@ commandManager.addCommand(coordsCommand)
 
 function pick(_name, ...options) {
     if(baseConditions() && chatSettings.pick) {
-        ChatLib.command(`pc ${options[Math.floor(Math.random() * options.length)]}`);
+        ChatLib.command(`pc ${options[Math.floor(Math.random() * options.length)] ?? "You must tell me what to choose from!"}`);
     }
 }
 

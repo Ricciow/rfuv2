@@ -15,3 +15,8 @@ register('messageSent', (message, event) => {
     lastMsg = message;
     ChatLib.say(message);
 })
+
+register('chat', (message, event) => {
+    if(!managerSettings.chatUtils || !chatSettings.chatHiders) return
+    if(chatData["hide"].includes(message)) cancel(event);
+}).setCriteria("${message}")
