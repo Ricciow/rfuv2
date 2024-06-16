@@ -2,25 +2,18 @@ import { UIText , UIBlock, UICircle, UIRoundedRectangle, UIContainer, AspectCons
 import { GuiElement } from "./GuiElement";
 const Color = Java.type("java.awt.Color");
 
-function UIVanillaText() {
-    return new JavaAdapter(UIText, {
-        draw() {
-            Tessellator.pushMatrix()
-            let text = new Text(this.getText()).setShadow(this.getShadow())
-            text.setScale(this.getHeight()/text.getHeight())
-            LongestLine = Math.max(...text.getLines().map((line) => Renderer.getStringWidth(line) * text.getScale()))
-            if(LongestLine > this.getWidth()) {
-                LongestLine = Math.max(...text.getLines().map((line) => Renderer.getStringWidth(line)))
-                text.setScale(this.getWidth()/LongestLine)
-            }
-            LongestLine = Math.max(...text.getLines().map((line) => Renderer.getStringWidth(line) * text.getScale()))
-            text.draw(this.getLeft()+(this.getWidth()/2)-(LongestLine/2), this.getTop()+(this.getHeight()/2)-(text.getHeight()/2)+(1*text.getScale()))
-            Tessellator.popMatrix()
-        }
-    });
-}
-
 import { UIItem } from "../UIItem";
+import { UIVanillaText } from "../UIVanillaText";
+
+const ColorNumber = {
+    "b": new Color(85/255, 1, 1, 1),
+    "d": new Color(1, 85/255, 1, 1),
+    '6': new Color(1, 170/255, 0, 1),
+    '5': new Color(170/255, 0, 170/255, 1),
+    '9': new Color(85/255, 85/255, 1, 1),
+    'a': new Color(85/255, 1, 85/255, 1),
+    'f': new Color(1, 1, 1, 1)
+}
 
 export class PetDisplayElement extends GuiElement {
 
@@ -33,7 +26,6 @@ export class PetDisplayElement extends GuiElement {
      */
     constructor(saveKey, defaultX = 0, defaultY = 0, pet) {
         super(saveKey, defaultX, defaultY, 100, 30, 'both')
-
         this.bgSquare = new UIRoundedRectangle(10)
         .setColor(new Color(0.5,0.5,0.5,1))
         .setX((0).pixels(true))
@@ -80,7 +72,7 @@ export class PetDisplayElement extends GuiElement {
         .setChildOf(this.bgCircleBoundingBox)
 
         this.rarityCircle = new UICircle()
-        .setColor(new Color(1,1,1,1))
+        .setColor(new Color(0.25,0.25,0.25,1))
         .setX(new CenterConstraint)
         .setY(new CenterConstraint)
         .setRadius((90).percent())
@@ -99,6 +91,22 @@ export class PetDisplayElement extends GuiElement {
      * @param {Item} item 
      */
     setItem(item) {
+        name = item.getName()
+        color = name.split("").reverse().join("").replace(/§[abcdef0123456789]\s*✦/, "").split("§")[0].slice(-1).toLowerCase()
+        this.bgCircle.setColor(ColorNumber[color]??new Color(0.5,0.5,0.5,1))
+        this.text.setText(name)
         this.itemDisplay.setItem(item)
+    }
+
+    hide() {
+        super.hide()
+        this.text.hide()
+        this.itemDisplay.hide()
+    }
+
+    unhide() {
+        super.unhide()
+        this.text.unhide()
+        this.itemDisplay.unhide()
     }
 }

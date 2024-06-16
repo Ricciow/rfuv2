@@ -119,4 +119,12 @@ export class GuiElement {
     close() {
         this.boundingBox.setColor(invisibleColor)
     }
+
+    hide() {
+        this.boundingBox.hide()
+    }
+
+    unhide() {
+        this.boundingBox.unhide(true)
+    }
 }

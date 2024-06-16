@@ -47,4 +47,14 @@ export class VanillaTextElement extends GuiElement {
     getText() {
         return this.text
     }
+
+    hide() {
+        super.hide()
+        this.UIText.hide()
+    }
+
+    unhide() {
+        super.unhide()
+        this.UIText.unhide()
+    }
 }

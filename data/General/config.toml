@@ -1,0 +1,9 @@
+
+[pets]
+
+	[pets."==_configuration_=="]
+		test = true
+
+	[pets.pet_display]
+		enable_pet_display = true
+

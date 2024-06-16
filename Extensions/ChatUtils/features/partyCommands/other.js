@@ -24,7 +24,7 @@ register('chat', (user) => {
 register("chat", (user, message) => {
     if(!managerSettings.chatUtils) return
     if(user.includes(":")) {
-        tempName = name.split(": ");
+        tempName = user.split(": ");
         user = tempName.shift();
         message = tempName.reduce((accumulator, currentValue) => accumulator + currentValue + ": ", "") + message;
     }

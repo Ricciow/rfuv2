@@ -6,7 +6,10 @@ import "./Extensions/ChatUtils/partyTracker"
 import "./Extensions/ChatUtils/features/partyCommands/commands";
 import "./Extensions/ChatUtils/features/partyCommands/other"
 import "./Extensions/ChatUtils/features/chat"
-//
+//Cishing
+//Fishing
+//General Imports
+import "./Extensions/GeneralUtils/features/petManager"
 
 //Manager Imports
 import moduleData from "./data/Manager/moduleData";
@@ -48,5 +51,3 @@ else if(moduleData.version != metadata.version) {
 }
 moduleData.version = metadata.version;
 moduleData.save();
-
-a = new PetDisplayElement('test', 0, 0)

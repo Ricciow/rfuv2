@@ -14,6 +14,7 @@ import {
 } from "../../Vigilance";
 
 import chatSettings from "../Extensions/ChatUtils/chatSettings";
+import generalSettings from "../Extensions/GeneralUtils/generalSettings";
 
 @Vigilant('rfuv2/data/Manager', 'RiccioFishingUtils V2.0.0', {
     getCategoryComparator: () => (a, b) => {
@@ -121,7 +122,7 @@ class ManagerSettings {
         placeholder: "Open"
     })
     openGeneralUtils() {
-        //generalUtils.openHere
+        generalSettings.openGUI()
     }
 
     //Hollows Utils

@@ -343,7 +343,7 @@ commandManager.addCommand(allinviteCommand)
 //-----------------------Coords-----------------------\\
 function coords(_name, parameter) {
     if(baseConditions() && chatSettings.coords) {
-        if(parameter) if(parameter != playerName) return
+        if(parameter) if(!playerName.toLowerCase().includes(parameter.toLowerCase())) return
         ChatLib.command(`pc x: ${Math.round(Player.getX())}, y: ${Math.round(Player.getY())}, z: ${Math.round(Player.getZ())}`)
     }
 }

@@ -82,7 +82,8 @@ export class UIItem {
      * Deletes the currently displayed item
      */
     deleteDisplay() {
-        this.component.getParent().removeChild(this.component);
+        this.component?.getParent().removeChild(this.component);
+        this.component = undefined
         return this
     }
 
@@ -92,9 +93,31 @@ export class UIItem {
      */
     setItem(item) {
         this.item = item
-        this.deleteDisplay()
-        this.createDisplay()
+        this.hide()
+        this.unhide()
         return this
     }
 
+    /**
+     * Hides the display
+     */
+    hide() {
+        this.deleteDisplay()
+        return this
+    }
+
+    /**
+     * Unhides the display
+     */
+    unhide() {
+        if(!this.component) {
+            this.createDisplay()
+            this.setX(this.x)
+            this.setY(this.y)
+            this.setWidth(this.width)
+            this.setHeight(this.height)
+            this.setChildOf(this.parent)
+        }
+        return this
+    }
 }
