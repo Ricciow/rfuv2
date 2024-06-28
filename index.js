@@ -15,8 +15,8 @@ import "./Extensions/GeneralUtils/features/petManager"
 import moduleData from "./data/Manager/moduleData";
 metadata = JSON.parse(FileLib.read("rfuv2", 'metadata.json'))
 //Utils Imports
+import "./utils/gui/updater"
 import { sendModMessage } from "./utils/functions";
-import { PetDisplayElement } from "./utils/gui/elements/PetDisplayElement";
 
 const extensions = {
     "chat": managerSettings.openChatUtils,

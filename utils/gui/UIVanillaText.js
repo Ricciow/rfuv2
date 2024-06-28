@@ -38,7 +38,7 @@ export class UIVanillaText {
      * Delete the element
      */
     deleteElement() {
-        this.element?.getParent().removeChild(this.element)
+        this.element?.getParent()?.removeChild(this.element)
         this.element = undefined
         return this
     }
@@ -49,7 +49,7 @@ export class UIVanillaText {
      */
     setX(x) {
         this.x = x
-        this.element.setX(x)
+        this.element?.setX(x)
         return this
     }
 
@@ -59,7 +59,7 @@ export class UIVanillaText {
      */
     setY(y) {
         this.y = y
-        this.element.setY(y)
+        this.element?.setY(y)
         return this
     }
 
@@ -69,7 +69,7 @@ export class UIVanillaText {
      */
     setWidth(width) {
         this.width = width
-        this.element.setWidth(width)
+        this.element?.setWidth(width)
         return this
     }
 
@@ -79,7 +79,7 @@ export class UIVanillaText {
      */
     setHeight(height) {
         this.height = height
-        this.element.setHeight(height)
+        this.element?.setHeight(height)
         return this
     }
 
@@ -89,7 +89,7 @@ export class UIVanillaText {
      */
     setChildOf(parent) {
         this.parent = parent
-        this.element.setChildOf(parent)
+        this.element?.setChildOf(parent)
         return this
     }
 
@@ -99,7 +99,7 @@ export class UIVanillaText {
      */
     setText(text) {
         this.text = text
-        this.element.setText(text)
+        this.element?.setText(text)
         return this
     }
 

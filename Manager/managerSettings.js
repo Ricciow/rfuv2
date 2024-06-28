@@ -56,7 +56,7 @@ class ManagerSettings {
 
     @ButtonProperty({
         name: "Open Chat Utils Settings",
-        description: "Opens the chat settings\n/rfu chat\n&eKeywords: commands,warp,invite,togglewarp,transfer,pt",
+        description: "Opens the chat settings\n/rfu chat\n&eKeywords: party,commands,replacement,hide",
         category: "Introduction",
         subcategory: 'Access Extensions',
         placeholder: "Open"
@@ -116,7 +116,7 @@ class ManagerSettings {
 
     @ButtonProperty({
         name: "Open General Utils Settings",
-        description: "Opens the general settings\n/rfu general\n&eKeywords: ",
+        description: "Opens the general settings\n/rfu general\n&eKeywords: pets",
         category: "Introduction",
         subcategory: 'Access Extensions',
         placeholder: "Open"

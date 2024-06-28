@@ -38,7 +38,7 @@ export class UIItem {
      */
     setX(x) {
         this.x = x
-        this.component.setX(this.x)
+        this.component?.setX(this.x)
         return this
     }
 
@@ -48,7 +48,7 @@ export class UIItem {
      */
     setY(y) {
         this.y = y
-        this.component.setY(this.y)
+        this.component?.setY(this.y)
         return this
     }
 
@@ -58,7 +58,7 @@ export class UIItem {
      */
     setWidth(width) {
         this.width = width
-        this.component.setWidth(this.width)
+        this.component?.setWidth(this.width)
         return this
     }
 
@@ -68,13 +68,13 @@ export class UIItem {
      */
     setHeight(height) {
         this.height = height
-        this.component.setHeight(this.height)
+        this.component?.setHeight(this.height)
         return this
     }
 
     setChildOf(parent) {
         this.parent = parent
-        this.component.setChildOf(parent)
+        this.component?.setChildOf(parent)
         return this
     }
 
@@ -82,7 +82,7 @@ export class UIItem {
      * Deletes the currently displayed item
      */
     deleteDisplay() {
-        this.component?.getParent().removeChild(this.component);
+        this.component?.getParent()?.removeChild(this.component);
         this.component = undefined
         return this
     }

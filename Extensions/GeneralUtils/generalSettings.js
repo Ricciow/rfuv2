@@ -87,7 +87,7 @@ class GeneralSettings {
     //Pets Tab
     @SwitchProperty({
         name: 'Enable Pet Display',
-        description: 'Shows your currently equiped pet, now with icons :D',
+        description: 'Shows your currently equiped pet, now with icons :D\n&4Currently you need to scroll through your pet menu on every game restart for icons to show properly, will find a fix later (hopefully)',
         category: 'Pets',
         subcategory: 'Pet Display',
     })
