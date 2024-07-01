@@ -1,12 +1,226 @@
 {
-    "equipped": 19,
+    "equipped": 23,
     "existingPets": [
         {
             "id": "minecraft:skull",
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "8d89cbc6-777c-4013-a472-5a2d740d4c57",
+                    "Id": "36699487-341f-47f4-aafe-2b3b0b0894e6",
+                    "hypixelPopulated": 1,
+                    "Properties": {
+                        "textures": [
+                            {
+                                "Value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDBjZDcxZmJiYmJiNjZjN2JhZjc4ODFmNDE1YzY0ZmE4NGY2NTA0OTU4YTU3Y2NkYjg1ODkyNTI2NDdlYSJ9fX0="
+                            }
+                        ]
+                    },
+                    "Name": "§36699487-341f-47f4-aafe-2b3b0b0894e6"
+                },
+                "display": {
+                    "Lore": [
+                        "§8Fishing Pet",
+                        "",
+                        "§7Defense: §a+48",
+                        "§7Strength: §c+48",
+                        "",
+                        "§6Quick Reel",
+                        "§7§7Grants §b+76.8☂ Fishing Speed§7.",
+                        "",
+                        "§6Water Bender",
+                        "§7§7Gives §a96 §c❁ Strength §7and §a❈ Defense",
+                        "§a§7when near water.",
+                        "",
+                        "§6Deep Sea Diver",
+                        "§7§7Increases the stats of Diver's",
+                        "§7Armor by §a19.2%§7.",
+                        "",
+                        "§6Held Item: §9Fishing Exp Boost",
+                        "§7Gives §a+40% §7pet exp for Fishing.",
+                        "",
+                        "§7Progress to Level 97: §e0%",
+                        "§2§l§m §f§l§m                        §r §e525§6/§e1.4M",
+                        "",
+                        "§7§eLeft-click to summon!",
+                        "§eRight-click to convert to an item!"
+                    ],
+                    "Name": "§7[Lvl 96] §6Flying Fish"
+                },
+                "ExtraAttributes": {
+                    "petInfo": "{\"type\":\"FLYING_FISH\",\"active\":false,\"exp\":1.8606955046459652E7,\"tier\":\"LEGENDARY\",\"hideInfo\":false,\"heldItem\":\"PET_ITEM_FISHING_SKILL_BOOST_RARE\",\"candyUsed\":0,\"uuid\":\"609342ab-9efd-4688-8ee2-0df6bed06ff9\",\"uniqueId\":\"00363884-705f-4527-b835-9181761119b2\",\"hideRightClick\":false,\"noMove\":false}",
+                    "id": "PET",
+                    "uuid": "609342ab-9efd-4688-8ee2-0df6bed06ff9"
+                }
+            },
+            "Damage": 3
+        },
+        {
+            "id": "minecraft:skull",
+            "Count": 1,
+            "tag": {
+                "SkullOwner": {
+                    "Id": "37e5da94-5788-4968-bdc1-fa43f44200fa",
+                    "hypixelPopulated": 1,
+                    "Properties": {
+                        "textures": [
+                            {
+                                "Value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTY1N2NkNWMyOTg5ZmY5NzU3MGZlYzRkZGNkYzY5MjZhNjhhMzM5MzI1MGMxYmUxZjBiMTE0YTFkYjEifX19"
+                            }
+                        ]
+                    },
+                    "Name": "§37e5da94-5788-4968-bdc1-fa43f44200fa"
+                },
+                "display": {
+                    "Lore": [
+                        "§8Foraging Pet",
+                        "",
+                        "§7Speed: §a+50",
+                        "§7Ferocity: §a+10",
+                        "",
+                        "§6Foraging Wisdom Boost",
+                        "§7§7§7Grants §3+30☯ Foraging Wisdom§7.",
+                        "",
+                        "§6Tree Hugger",
+                        "§7§7Foraging minions work §a30% §7faster",
+                        "§7while on your island.",
+                        "",
+                        "§6Held Item: §9Mining Exp Boost",
+                        "§7Gives §a+40% §7pet exp for Mining.",
+                        "",
+                        "§b§lMAX LEVEL",
+                        "§8▸ 20,258,353 XP",
+                        "",
+                        "§7§eLeft-click to summon!",
+                        "§eRight-click to convert to an item!"
+                    ],
+                    "Name": "§7[Lvl 100] §5Ocelot"
+                },
+                "ExtraAttributes": {
+                    "petInfo": "{\"type\":\"OCELOT\",\"active\":false,\"exp\":2.0258353524297565E7,\"tier\":\"EPIC\",\"hideInfo\":false,\"heldItem\":\"PET_ITEM_MINING_SKILL_BOOST_RARE\",\"candyUsed\":0,\"uuid\":\"762d5ccf-7c00-455b-b3a1-dee765f29665\",\"uniqueId\":\"c0a248cb-7354-44a3-9557-56782738f7f9\",\"hideRightClick\":false,\"noMove\":false}",
+                    "id": "PET",
+                    "uuid": "762d5ccf-7c00-455b-b3a1-dee765f29665"
+                }
+            },
+            "Damage": 3
+        },
+        {
+            "id": "minecraft:skull",
+            "Count": 1,
+            "tag": {
+                "SkullOwner": {
+                    "Id": "c5eec18a-e3b0-4acc-95fc-31cfa823c7d1",
+                    "hypixelPopulated": 1,
+                    "Properties": {
+                        "textures": [
+                            {
+                                "Value": "ewogICJ0aW1lc3RhbXAiIDogMTY0NzA0MDE4NjI1NywKICAicHJvZmlsZUlkIiA6ICI0ZDEzZWUyZjViOWI0N2I2OGU2NzhhMjAxN2VmZTc1MyIsCiAgInByb2ZpbGVOYW1lIiA6ICJCcmF5ZGVyZWsiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWYwMjM5ZmI0OThlNTkwN2VkZTEyYWIzMjYyOWVlOTVmMDA2NDU3NGE5ZmZkZmY5ZmMzYTFjOGUyZWMxNzU4NyIKICAgIH0KICB9Cn0="
+                            }
+                        ]
+                    },
+                    "Name": "§c5eec18a-e3b0-4acc-95fc-31cfa823c7d1"
+                },
+                "display": {
+                    "Lore": [
+                        "§8Combat Pet",
+                        "",
+                        "§7Health: §a+400",
+                        "§7Strength: §c+40",
+                        "",
+                        "§6Crimson",
+                        "§7§7Grants §a15% §7extra Crimson Essence§7.",
+                        "",
+                        "§6Wither Bait",
+                        "§7§7Increases the odds of finding a",
+                        "§7vanquisher by §a15%§7.",
+                        "",
+                        "§6Kuudra Fortune",
+                        "§7§7Gain §6+50☘ Mining Fortune §7while on",
+                        "§7the Crimson Isle.",
+                        "",
+                        "§7§8This pet's perks are active even",
+                        "§8when the pet is not summoned!",
+                        "",
+                        "§7§8This pet automatically has EXP share!",
+                        "",
+                        "§7§8This pet only gains XP on the",
+                        "§8§cCrimson Isle§8!",
+                        "",
+                        "§b§lMAX LEVEL",
+                        "§8▸ 25,359,686 XP",
+                        "",
+                        "§7§eLeft-click to summon!",
+                        "§eRight-click to convert to an item!"
+                    ],
+                    "Name": "§7[Lvl 100] §9Kuudra"
+                },
+                "ExtraAttributes": {
+                    "petInfo": "{\"type\":\"KUUDRA\",\"active\":false,\"exp\":2.535968610053896E7,\"tier\":\"RARE\",\"hideInfo\":false,\"candyUsed\":0,\"uuid\":\"48c730f6-9d1b-420a-8ba3-390e86df04a8\",\"uniqueId\":\"d66abaa3-7ba4-4acb-9b10-c5dbf1eb1f8e\",\"hideRightClick\":false,\"noMove\":false}",
+                    "id": "PET",
+                    "uuid": "48c730f6-9d1b-420a-8ba3-390e86df04a8"
+                }
+            },
+            "Damage": 3
+        },
+        {
+            "id": "minecraft:skull",
+            "Count": 1,
+            "tag": {
+                "SkullOwner": {
+                    "Id": "cda7d77b-28ca-4c98-858f-5bec048a6365",
+                    "hypixelPopulated": 1,
+                    "Properties": {
+                        "textures": [
+                            {
+                                "Value": "ewogICJ0aW1lc3RhbXAiIDogMTcwNzg1NDIwMTk4MywKICAicHJvZmlsZUlkIiA6ICI1NzgzZWMxNDgxMDI0ZDJmOTk4N2JhNGZhNWNlMmFmOCIsCiAgInByb2ZpbGVOYW1lIiA6ICJCbHVlUGhlbml4NDMiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzc1MzRlOTdmMzZlNWE4MzM1OTI4ZTE3MWVjOTk2MDhiZWU3ZmIxNmUyNjBhZmIzMDEwMjViM2IxN2VlZWZjNCIKICAgIH0KICB9Cn0="
+                            }
+                        ]
+                    },
+                    "Name": "§cda7d77b-28ca-4c98-858f-5bec048a6365"
+                },
+                "display": {
+                    "Lore": [
+                        "§8Fishing Pet",
+                        "",
+                        "§7Sea Creature Chance: §c+10%",
+                        "",
+                        "§6Thick Blubber",
+                        "§7§7Each time you catch a Sea Creature,",
+                        "§7reduce your §b❄ Cold §7by §a6§7.",
+                        "",
+                        "§6Expert Glacite Fisher",
+                        "§7§7The fishing speed reduction from",
+                        "§7being underground is reduced by",
+                        "§7§a100%§7.",
+                        "",
+                        "§6Subzero Hero",
+                        "§7§7Gain §b+75§b☂ Fishing Speed §7while in the",
+                        "§7§bGlacite Tunnels§7.",
+                        "",
+                        "§6Held Item: §5Fishing Exp Boost",
+                        "§7Gives §a+50% §7pet exp for Fishing.",
+                        "",
+                        "§b§lMAX LEVEL",
+                        "§8▸ 25,370,185 XP",
+                        "",
+                        "§7§eLeft-click to summon!",
+                        "§eRight-click to convert to an item!"
+                    ],
+                    "Name": "§7[Lvl 100] §6Penguin"
+                },
+                "ExtraAttributes": {
+                    "petInfo": "{\"type\":\"PENGUIN\",\"active\":false,\"exp\":2.537018568599045E7,\"tier\":\"LEGENDARY\",\"hideInfo\":false,\"heldItem\":\"PET_ITEM_FISHING_SKILL_BOOST_EPIC\",\"candyUsed\":0,\"uuid\":\"a6af52e1-e369-43f2-91ea-fea9a5577e91\",\"uniqueId\":\"492dc65f-3d26-4b37-b9aa-d556f5cc8bb8\",\"hideRightClick\":false,\"noMove\":false}",
+                    "id": "PET",
+                    "uuid": "a6af52e1-e369-43f2-91ea-fea9a5577e91"
+                }
+            },
+            "Damage": 3
+        },
+        {
+            "id": "minecraft:skull",
+            "Count": 1,
+            "tag": {
+                "SkullOwner": {
+                    "Id": "57165002-d999-40ec-a417-add6d31102eb",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -15,7 +229,7 @@
                             }
                         ]
                     },
-                    "Name": "§8d89cbc6-777c-4013-a472-5a2d740d4c57"
+                    "Name": "§57165002-d999-40ec-a417-add6d31102eb"
                 },
                 "display": {
                     "Lore": [
@@ -65,7 +279,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "68f4d188-3415-4d30-8bcd-63357d38cd90",
+                    "Id": "20fbc898-45f5-4c0f-9854-d5ef8378b1c0",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -74,7 +288,7 @@
                             }
                         ]
                     },
-                    "Name": "§68f4d188-3415-4d30-8bcd-63357d38cd90"
+                    "Name": "§20fbc898-45f5-4c0f-9854-d5ef8378b1c0"
                 },
                 "display": {
                     "Lore": [
@@ -117,7 +331,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "3887493a-192d-41b7-8530-5835b7672633",
+                    "Id": "ac852947-0e8f-4217-be5a-4e04a8e6c21b",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -126,7 +340,7 @@
                             }
                         ]
                     },
-                    "Name": "§3887493a-192d-41b7-8530-5835b7672633"
+                    "Name": "§ac852947-0e8f-4217-be5a-4e04a8e6c21b"
                 },
                 "display": {
                     "Lore": [
@@ -172,7 +386,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "83bbc464-87a6-489c-ae33-38cf230efdfd",
+                    "Id": "b50c4ba9-6484-4609-8198-c417763e73a6",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -181,7 +395,7 @@
                             }
                         ]
                     },
-                    "Name": "§83bbc464-87a6-489c-ae33-38cf230efdfd"
+                    "Name": "§b50c4ba9-6484-4609-8198-c417763e73a6"
                 },
                 "display": {
                     "Lore": [
@@ -226,7 +440,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "e362633f-185c-4bc4-bea1-c4820439c407",
+                    "Id": "13592038-8c26-4144-9489-01d1d828e147",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -235,7 +449,7 @@
                             }
                         ]
                     },
-                    "Name": "§e362633f-185c-4bc4-bea1-c4820439c407"
+                    "Name": "§13592038-8c26-4144-9489-01d1d828e147"
                 },
                 "display": {
                     "Lore": [
@@ -282,7 +496,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "4b6c86ad-9dba-49c4-be26-59523e099450",
+                    "Id": "1973c2ec-f008-4798-b7d6-6b0f5eda2dab",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -291,7 +505,7 @@
                             }
                         ]
                     },
-                    "Name": "§4b6c86ad-9dba-49c4-be26-59523e099450"
+                    "Name": "§1973c2ec-f008-4798-b7d6-6b0f5eda2dab"
                 },
                 "display": {
                     "Lore": [
@@ -345,7 +559,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "82af7eed-5efc-48e4-9e4b-30618773814c",
+                    "Id": "04132f79-c2f9-4f87-a40f-b57d42f962aa",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -354,7 +568,7 @@
                             }
                         ]
                     },
-                    "Name": "§82af7eed-5efc-48e4-9e4b-30618773814c"
+                    "Name": "§04132f79-c2f9-4f87-a40f-b57d42f962aa"
                 },
                 "display": {
                     "Lore": [
@@ -401,7 +615,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "db52e174-33bb-40e8-99d8-592c32220ff2",
+                    "Id": "04cc341f-4c56-4191-8a6d-6ad9eccf8a85",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -410,7 +624,7 @@
                             }
                         ]
                     },
-                    "Name": "§db52e174-33bb-40e8-99d8-592c32220ff2"
+                    "Name": "§04cc341f-4c56-4191-8a6d-6ad9eccf8a85"
                 },
                 "display": {
                     "Lore": [
@@ -455,7 +669,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "8b48b1e6-78de-4c30-98f3-fbedd7daebcb",
+                    "Id": "a55dbe2f-3b4d-43da-818f-95c755826e6f",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -464,7 +678,7 @@
                             }
                         ]
                     },
-                    "Name": "§8b48b1e6-78de-4c30-98f3-fbedd7daebcb"
+                    "Name": "§a55dbe2f-3b4d-43da-818f-95c755826e6f"
                 },
                 "display": {
                     "Lore": [
@@ -514,7 +728,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "401c4a7d-1134-4312-84b7-bf6df8ff381d",
+                    "Id": "23418b9b-7e61-40b9-868a-ca6ea37e9867",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -523,7 +737,7 @@
                             }
                         ]
                     },
-                    "Name": "§401c4a7d-1134-4312-84b7-bf6df8ff381d"
+                    "Name": "§23418b9b-7e61-40b9-868a-ca6ea37e9867"
                 },
                 "display": {
                     "Lore": [
@@ -556,13 +770,13 @@
                         "§b§lMAX LEVEL",
                         "§8▸ 35,368,769 XP",
                         "",
-                        "§7§cClick to despawn!",
+                        "§7§eLeft-click to summon!",
                         "§eRight-click to convert to an item!"
                     ],
                     "Name": "§7[Lvl 100] §6Reindeer"
                 },
                 "ExtraAttributes": {
-                    "petInfo": "{\"type\":\"REINDEER\",\"active\":true,\"exp\":3.536876936943827E7,\"tier\":\"LEGENDARY\",\"hideInfo\":false,\"heldItem\":\"CROCHET_TIGER_PLUSHIE\",\"candyUsed\":0,\"uuid\":\"ddd43996-c98b-4ed3-a332-5ba91ab2790f\",\"uniqueId\":\"1fb4e455-cb60-45c1-b11c-babcfff05033\",\"hideRightClick\":false,\"noMove\":false}",
+                    "petInfo": "{\"type\":\"REINDEER\",\"active\":false,\"exp\":3.536876936943827E7,\"tier\":\"LEGENDARY\",\"hideInfo\":false,\"heldItem\":\"CROCHET_TIGER_PLUSHIE\",\"candyUsed\":0,\"uuid\":\"ddd43996-c98b-4ed3-a332-5ba91ab2790f\",\"uniqueId\":\"1fb4e455-cb60-45c1-b11c-babcfff05033\",\"hideRightClick\":false,\"noMove\":false}",
                     "id": "PET",
                     "uuid": "ddd43996-c98b-4ed3-a332-5ba91ab2790f"
                 }
@@ -574,7 +788,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "aa36657a-7719-466e-ad62-27d8e15e0a1f",
+                    "Id": "3c534883-7b04-4816-be27-6c5debc6f957",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -583,7 +797,7 @@
                             }
                         ]
                     },
-                    "Name": "§aa36657a-7719-466e-ad62-27d8e15e0a1f"
+                    "Name": "§3c534883-7b04-4816-be27-6c5debc6f957"
                 },
                 "display": {
                     "Lore": [
@@ -630,7 +844,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "cdaa3d45-7951-4e12-84cf-b8ac8a919bfc",
+                    "Id": "43d273bc-1ad2-4ab1-99b7-84a961fb46e4",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -639,7 +853,7 @@
                             }
                         ]
                     },
-                    "Name": "§cdaa3d45-7951-4e12-84cf-b8ac8a919bfc"
+                    "Name": "§43d273bc-1ad2-4ab1-99b7-84a961fb46e4"
                 },
                 "display": {
                     "Lore": [
@@ -668,7 +882,7 @@
                         "§6Mining Fortune§7.",
                         "",
                         "§b§lMAX LEVEL",
-                        "§8▸ 38,163,038 XP",
+                        "§8▸ 40,575,182 XP",
                         "",
                         "§7§eLeft-click to summon!",
                         "§eRight-click to convert to an item!"
@@ -676,7 +890,7 @@
                     "Name": "§7[Lvl 100] §6Bal"
                 },
                 "ExtraAttributes": {
-                    "petInfo": "{\"type\":\"BAL\",\"active\":false,\"exp\":3.816303834645579E7,\"tier\":\"LEGENDARY\",\"hideInfo\":false,\"heldItem\":\"BEJEWELED_COLLAR\",\"candyUsed\":0,\"uuid\":\"9ecd6893-7c3c-4b48-a469-5635761fb3df\",\"uniqueId\":\"42b5db99-dd9e-49c5-a6c3-dcfd794cc7a8\",\"hideRightClick\":false,\"noMove\":false}",
+                    "petInfo": "{\"type\":\"BAL\",\"active\":false,\"exp\":4.05751820555784E7,\"tier\":\"LEGENDARY\",\"hideInfo\":false,\"heldItem\":\"BEJEWELED_COLLAR\",\"candyUsed\":0,\"uuid\":\"9ecd6893-7c3c-4b48-a469-5635761fb3df\",\"uniqueId\":\"42b5db99-dd9e-49c5-a6c3-dcfd794cc7a8\",\"hideRightClick\":false,\"noMove\":false}",
                     "id": "PET",
                     "uuid": "9ecd6893-7c3c-4b48-a469-5635761fb3df"
                 }
@@ -688,7 +902,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "24891186-5ff9-457b-bc3b-153c205554e2",
+                    "Id": "7f2fcc2b-40a0-4838-8dc0-a080ccacd331",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -697,7 +911,7 @@
                             }
                         ]
                     },
-                    "Name": "§24891186-5ff9-457b-bc3b-153c205554e2"
+                    "Name": "§7f2fcc2b-40a0-4838-8dc0-a080ccacd331"
                 },
                 "display": {
                     "Lore": [
@@ -745,7 +959,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "525f51f6-8be1-4714-a049-042efdfc4eac",
+                    "Id": "7bc08957-2cbb-45b3-9b6a-237f86f25eff",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -754,7 +968,7 @@
                             }
                         ]
                     },
-                    "Name": "§525f51f6-8be1-4714-a049-042efdfc4eac"
+                    "Name": "§7bc08957-2cbb-45b3-9b6a-237f86f25eff"
                 },
                 "display": {
                     "Lore": [
@@ -784,7 +998,7 @@
                         "§7knockback.",
                         "",
                         "§b§lMAX LEVEL",
-                        "§8▸ 43,865,325 XP",
+                        "§8▸ 43,943,456 XP",
                         "",
                         "§7§eLeft-click to summon!",
                         "§eRight-click to convert to an item!"
@@ -792,7 +1006,7 @@
                     "Name": "§7[Lvl 100] §dBlack Cat"
                 },
                 "ExtraAttributes": {
-                    "petInfo": "{\"type\":\"BLACK_CAT\",\"active\":false,\"exp\":4.386532571507926E7,\"tier\":\"MYTHIC\",\"hideInfo\":false,\"heldItem\":\"DWARF_TURTLE_SHELMET\",\"candyUsed\":0,\"uuid\":\"2e02fdc6-d828-406a-804f-4df4b44f2d7d\",\"uniqueId\":\"39ecbca8-b439-4b8e-bd1f-7c2fb9775b5e\",\"hideRightClick\":false,\"noMove\":false}",
+                    "petInfo": "{\"type\":\"BLACK_CAT\",\"active\":false,\"exp\":4.394345632168725E7,\"tier\":\"MYTHIC\",\"hideInfo\":false,\"heldItem\":\"DWARF_TURTLE_SHELMET\",\"candyUsed\":0,\"uuid\":\"2e02fdc6-d828-406a-804f-4df4b44f2d7d\",\"uniqueId\":\"39ecbca8-b439-4b8e-bd1f-7c2fb9775b5e\",\"hideRightClick\":false,\"noMove\":false}",
                     "id": "PET",
                     "uuid": "2e02fdc6-d828-406a-804f-4df4b44f2d7d"
                 }
@@ -804,7 +1018,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "7e98b138-3e8f-4557-806e-c033c7f4ff38",
+                    "Id": "0c855ae8-0db0-47b0-a4a5-6e2813cfd33f",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -813,7 +1027,7 @@
                             }
                         ]
                     },
-                    "Name": "§7e98b138-3e8f-4557-806e-c033c7f4ff38"
+                    "Name": "§0c855ae8-0db0-47b0-a4a5-6e2813cfd33f"
                 },
                 "display": {
                     "Lore": [
@@ -859,7 +1073,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "aaab51b8-9397-4231-9062-d29b12a2b725",
+                    "Id": "ae1d0991-3ee2-408c-a0e8-ed9719ee83eb",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -868,7 +1082,7 @@
                             }
                         ]
                     },
-                    "Name": "§aaab51b8-9397-4231-9062-d29b12a2b725"
+                    "Name": "§ae1d0991-3ee2-408c-a0e8-ed9719ee83eb"
                 },
                 "display": {
                     "Lore": [
@@ -915,7 +1129,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "268161a3-64db-48f7-be74-7f8ab269113f",
+                    "Id": "225451d8-c16e-4a7d-9e3a-61dea29ca1b4",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -924,7 +1138,7 @@
                             }
                         ]
                     },
-                    "Name": "§268161a3-64db-48f7-be74-7f8ab269113f"
+                    "Name": "§225451d8-c16e-4a7d-9e3a-61dea29ca1b4"
                 },
                 "display": {
                     "Lore": [
@@ -977,7 +1191,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "db52e174-33bb-40e8-99d8-592c32220ff2",
+                    "Id": "04cc341f-4c56-4191-8a6d-6ad9eccf8a85",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -986,7 +1200,7 @@
                             }
                         ]
                     },
-                    "Name": "§db52e174-33bb-40e8-99d8-592c32220ff2"
+                    "Name": "§04cc341f-4c56-4191-8a6d-6ad9eccf8a85"
                 },
                 "display": {
                     "Lore": [
@@ -1010,7 +1224,7 @@
                         "§7Gives §a+50% §7pet exp for Fishing.",
                         "",
                         "§b§lMAX LEVEL",
-                        "§8▸ 69,128,084 XP",
+                        "§8▸ 74,567,850 XP",
                         "",
                         "§7§eLeft-click to summon!",
                         "§eRight-click to convert to an item!"
@@ -1018,7 +1232,7 @@
                     "Name": "§7[Lvl 100] §6Squid"
                 },
                 "ExtraAttributes": {
-                    "petInfo": "{\"type\":\"SQUID\",\"active\":false,\"exp\":6.912808446287201E7,\"tier\":\"LEGENDARY\",\"hideInfo\":false,\"heldItem\":\"PET_ITEM_FISHING_SKILL_BOOST_EPIC\",\"candyUsed\":0,\"uuid\":\"cd7d9b5c-25ae-4dba-bd44-cb3f66afb27e\",\"uniqueId\":\"3e37229d-7f43-4db5-b7d1-3474a575b1ec\",\"hideRightClick\":false,\"noMove\":false}",
+                    "petInfo": "{\"type\":\"SQUID\",\"active\":false,\"exp\":7.45678504352115E7,\"tier\":\"LEGENDARY\",\"hideInfo\":false,\"heldItem\":\"PET_ITEM_FISHING_SKILL_BOOST_EPIC\",\"candyUsed\":0,\"uuid\":\"cd7d9b5c-25ae-4dba-bd44-cb3f66afb27e\",\"uniqueId\":\"3e37229d-7f43-4db5-b7d1-3474a575b1ec\",\"hideRightClick\":false,\"noMove\":false}",
                     "id": "PET",
                     "uuid": "cd7d9b5c-25ae-4dba-bd44-cb3f66afb27e"
                 }
@@ -1030,7 +1244,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "60913b9c-ec60-46d2-b0ca-e8de2274c4fb",
+                    "Id": "b8ca48da-8f7c-4c32-bd04-d5b65e19fb57",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -1039,7 +1253,7 @@
                             }
                         ]
                     },
-                    "Name": "§60913b9c-ec60-46d2-b0ca-e8de2274c4fb"
+                    "Name": "§b8ca48da-8f7c-4c32-bd04-d5b65e19fb57"
                 },
                 "display": {
                     "Lore": [
@@ -1083,7 +1297,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "e4120e0f-90a7-4887-84ef-499f7a3763b8",
+                    "Id": "cab7a09c-0f85-42a0-b06e-6174c140f8fc",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -1092,7 +1306,7 @@
                             }
                         ]
                     },
-                    "Name": "§e4120e0f-90a7-4887-84ef-499f7a3763b8"
+                    "Name": "§cab7a09c-0f85-42a0-b06e-6174c140f8fc"
                 },
                 "display": {
                     "Lore": [
@@ -1121,15 +1335,15 @@
                         "§7knockback.",
                         "",
                         "§b§lMAX LEVEL",
-                        "§8▸ 107,858,747 XP",
+                        "§8▸ 111,372,194 XP",
                         "",
-                        "§7§eLeft-click to summon!",
+                        "§7§cClick to despawn!",
                         "§eRight-click to convert to an item!"
                     ],
                     "Name": "§7[Lvl 100] §dFlying Fish"
                 },
                 "ExtraAttributes": {
-                    "petInfo": "{\"type\":\"FLYING_FISH\",\"active\":false,\"exp\":1.0785874734569696E8,\"tier\":\"MYTHIC\",\"hideInfo\":false,\"heldItem\":\"DWARF_TURTLE_SHELMET\",\"candyUsed\":0,\"uuid\":\"dac9d188-41ad-420a-9b34-3739e74b2faf\",\"uniqueId\":\"5ddab41e-a329-4c8b-8074-dba2a189ffea\",\"hideRightClick\":false,\"noMove\":false}",
+                    "petInfo": "{\"type\":\"FLYING_FISH\",\"active\":true,\"exp\":1.113721942304682E8,\"tier\":\"MYTHIC\",\"hideInfo\":false,\"heldItem\":\"DWARF_TURTLE_SHELMET\",\"candyUsed\":0,\"uuid\":\"dac9d188-41ad-420a-9b34-3739e74b2faf\",\"uniqueId\":\"5ddab41e-a329-4c8b-8074-dba2a189ffea\",\"hideRightClick\":false,\"noMove\":false}",
                     "id": "PET",
                     "uuid": "dac9d188-41ad-420a-9b34-3739e74b2faf"
                 }
@@ -1141,7 +1355,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "19b57b34-06ac-4422-becf-ac383a658527",
+                    "Id": "b1a8ead7-fcee-496d-8bac-e532b37834c2",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -1150,7 +1364,7 @@
                             }
                         ]
                     },
-                    "Name": "§19b57b34-06ac-4422-becf-ac383a658527"
+                    "Name": "§b1a8ead7-fcee-496d-8bac-e532b37834c2"
                 },
                 "display": {
                     "Lore": [
@@ -1199,7 +1413,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "1623fcbc-5b7c-474e-a011-dc14335e939d",
+                    "Id": "b832b66f-318a-4fe9-940a-21b1eb0239aa",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -1208,7 +1422,7 @@
                             }
                         ]
                     },
-                    "Name": "§1623fcbc-5b7c-474e-a011-dc14335e939d"
+                    "Name": "§b832b66f-318a-4fe9-940a-21b1eb0239aa"
                 },
                 "display": {
                     "Lore": [
@@ -1233,7 +1447,7 @@
                         "§5§7books in §dSuperpairs§7.",
                         "",
                         "§b§lMAX LEVEL",
-                        "§8▸ 183,407,993 XP",
+                        "§8▸ 185,875,842 XP",
                         "",
                         "§7§eLeft-click to summon!",
                         "§eRight-click to convert to an item!"
@@ -1241,7 +1455,7 @@
                     "Name": "§7[Lvl 100] §dGuardian"
                 },
                 "ExtraAttributes": {
-                    "petInfo": "{\"type\":\"GUARDIAN\",\"active\":false,\"exp\":1.8340799365960225E8,\"tier\":\"MYTHIC\",\"hideInfo\":false,\"candyUsed\":0,\"uuid\":\"ad3e187e-ff3e-4207-8887-c524c393239f\",\"uniqueId\":\"e18372ae-bf97-4074-8749-5ccc26db09e8\",\"hideRightClick\":false,\"noMove\":false}",
+                    "petInfo": "{\"type\":\"GUARDIAN\",\"active\":false,\"exp\":1.8587584218884063E8,\"tier\":\"MYTHIC\",\"hideInfo\":false,\"candyUsed\":0,\"uuid\":\"ad3e187e-ff3e-4207-8887-c524c393239f\",\"uniqueId\":\"e18372ae-bf97-4074-8749-5ccc26db09e8\",\"hideRightClick\":false,\"noMove\":false}",
                     "id": "PET",
                     "uuid": "ad3e187e-ff3e-4207-8887-c524c393239f"
                 }
@@ -1253,7 +1467,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "6dbe94d9-b396-45d3-900c-058ce1f870a7",
+                    "Id": "2fec1ab9-8421-482a-bbc7-13b189091217",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -1262,7 +1476,7 @@
                             }
                         ]
                     },
-                    "Name": "§6dbe94d9-b396-45d3-900c-058ce1f870a7"
+                    "Name": "§2fec1ab9-8421-482a-bbc7-13b189091217"
                 },
                 "display": {
                     "Lore": [
@@ -1317,7 +1531,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "91bbdfee-ae80-464e-956d-016db7d95aa0",
+                    "Id": "2cdc7779-2c47-4406-971e-1acdf92f3165",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -1326,7 +1540,7 @@
                             }
                         ]
                     },
-                    "Name": "§91bbdfee-ae80-464e-956d-016db7d95aa0"
+                    "Name": "§2cdc7779-2c47-4406-971e-1acdf92f3165"
                 },
                 "display": {
                     "Lore": [
@@ -1380,7 +1594,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "f5fd0a12-c2b9-4e32-bf6f-cefd9339bb99",
+                    "Id": "2a8aef38-79f2-4e8f-bad8-4c33c55b0c53",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -1389,7 +1603,7 @@
                             }
                         ]
                     },
-                    "Name": "§f5fd0a12-c2b9-4e32-bf6f-cefd9339bb99"
+                    "Name": "§2a8aef38-79f2-4e8f-bad8-4c33c55b0c53"
                 },
                 "display": {
                     "Lore": [
@@ -1440,60 +1654,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "59336c19-9f1b-4205-8d0d-e49ae42e8835",
-                    "hypixelPopulated": 1,
-                    "Properties": {
-                        "textures": [
-                            {
-                                "Value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDBjZDcxZmJiYmJiNjZjN2JhZjc4ODFmNDE1YzY0ZmE4NGY2NTA0OTU4YTU3Y2NkYjg1ODkyNTI2NDdlYSJ9fX0="
-                            }
-                        ]
-                    },
-                    "Name": "§59336c19-9f1b-4205-8d0d-e49ae42e8835"
-                },
-                "display": {
-                    "Lore": [
-                        "§8Fishing Pet",
-                        "",
-                        "§7Defense: §a+42",
-                        "§7Strength: §c+42",
-                        "",
-                        "§6Quick Reel",
-                        "§7§7Grants §b+67.2☂ Fishing Speed§7.",
-                        "",
-                        "§6Water Bender",
-                        "§7§7Gives §a84 §c❁ Strength §7and §a❈ Defense",
-                        "§a§7when near water.",
-                        "",
-                        "§6Deep Sea Diver",
-                        "§7§7Increases the stats of Diver's",
-                        "§7Armor by §a16.8%§7.",
-                        "",
-                        "§6Held Item: §9Fishing Exp Boost",
-                        "§7Gives §a+40% §7pet exp for Fishing.",
-                        "",
-                        "§7Progress to Level 85: §e32.4%",
-                        "§2§l§m         §f§l§m                §r §e182,187.9§6/§e561k",
-                        "",
-                        "§7§eLeft-click to summon!",
-                        "§eRight-click to convert to an item!"
-                    ],
-                    "Name": "§7[Lvl 84] §6Flying Fish"
-                },
-                "ExtraAttributes": {
-                    "petInfo": "{\"type\":\"FLYING_FISH\",\"active\":false,\"exp\":7648217.912284774,\"tier\":\"LEGENDARY\",\"hideInfo\":false,\"heldItem\":\"PET_ITEM_FISHING_SKILL_BOOST_RARE\",\"candyUsed\":0,\"uuid\":\"609342ab-9efd-4688-8ee2-0df6bed06ff9\",\"uniqueId\":\"00363884-705f-4527-b835-9181761119b2\",\"hideRightClick\":false,\"noMove\":false}",
-                    "id": "PET",
-                    "uuid": "609342ab-9efd-4688-8ee2-0df6bed06ff9"
-                }
-            },
-            "Damage": 3
-        },
-        {
-            "id": "minecraft:skull",
-            "Count": 1,
-            "tag": {
-                "SkullOwner": {
-                    "Id": "cfb74030-d5a6-41d5-aa7f-fe51d51f2208",
+                    "Id": "1021c605-41dc-4421-a98e-9db612045686",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -1502,7 +1663,7 @@
                             }
                         ]
                     },
-                    "Name": "§cfb74030-d5a6-41d5-aa7f-fe51d51f2208"
+                    "Name": "§1021c605-41dc-4421-a98e-9db612045686"
                 },
                 "display": {
                     "Lore": [
@@ -1556,7 +1717,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "e25a942e-31e5-40c4-8fed-571a0b403787",
+                    "Id": "adcaf94f-749b-4988-a1bd-fa8661feb274",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -1565,7 +1726,7 @@
                             }
                         ]
                     },
-                    "Name": "§e25a942e-31e5-40c4-8fed-571a0b403787"
+                    "Name": "§adcaf94f-749b-4988-a1bd-fa8661feb274"
                 },
                 "display": {
                     "Lore": [
@@ -1621,7 +1782,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "2646c3cd-f579-4c8b-bc75-342d7b413454",
+                    "Id": "c3f5bc33-653b-494e-9eed-114a08ad61dd",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -1630,7 +1791,7 @@
                             }
                         ]
                     },
-                    "Name": "§2646c3cd-f579-4c8b-bc75-342d7b413454"
+                    "Name": "§c3f5bc33-653b-494e-9eed-114a08ad61dd"
                 },
                 "display": {
                     "Lore": [
@@ -1670,7 +1831,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "cf289210-9fb3-45fa-8635-7e9660931b93",
+                    "Id": "22f323c6-f8b9-4a0a-abde-6e10b4518081",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -1679,7 +1840,7 @@
                             }
                         ]
                     },
-                    "Name": "§cf289210-9fb3-45fa-8635-7e9660931b93"
+                    "Name": "§22f323c6-f8b9-4a0a-abde-6e10b4518081"
                 },
                 "display": {
                     "Lore": [
@@ -1724,7 +1885,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "9b753bda-b2b1-4e7d-a2f9-b6014e5e26f0",
+                    "Id": "e92a526f-1165-4081-bb1c-49ddf3f11e99",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -1733,7 +1894,7 @@
                             }
                         ]
                     },
-                    "Name": "§9b753bda-b2b1-4e7d-a2f9-b6014e5e26f0"
+                    "Name": "§e92a526f-1165-4081-bb1c-49ddf3f11e99"
                 },
                 "display": {
                     "Lore": [
@@ -1774,7 +1935,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "34777a9c-082c-46c8-b8a1-df5c2c78d905",
+                    "Id": "5f57436a-c36a-4b8d-8e8a-aa0756054b89",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -1783,7 +1944,7 @@
                             }
                         ]
                     },
-                    "Name": "§34777a9c-082c-46c8-b8a1-df5c2c78d905"
+                    "Name": "§5f57436a-c36a-4b8d-8e8a-aa0756054b89"
                 },
                 "display": {
                     "Lore": [
@@ -1828,7 +1989,60 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "94daabec-db36-43e5-ad97-462ac0e3dfa8",
+                    "Id": "04132f79-c2f9-4f87-a40f-b57d42f962aa",
+                    "hypixelPopulated": 1,
+                    "Properties": {
+                        "textures": [
+                            {
+                                "Value": "ewogICJ0aW1lc3RhbXAiIDogMTYyMDExNTI5NDE1NiwKICAicHJvZmlsZUlkIiA6ICI0NWY3YTJlNjE3ODE0YjJjODAwODM5MmRmN2IzNWY0ZiIsCiAgInByb2ZpbGVOYW1lIiA6ICJfSnVzdERvSXQiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTA3NGE3YmQ5NzZmZTZhYmExNjI0MTYxNzkzYmU1NDdkNTRjODM1Y2Y0MjIyNDNhODUxYmEwOWQxZTY1MDU1MyIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9"
+                            }
+                        ]
+                    },
+                    "Name": "§04132f79-c2f9-4f87-a40f-b57d42f962aa"
+                },
+                "display": {
+                    "Lore": [
+                        "§8Fishing Pet",
+                        "",
+                        "§7Sea Creature Chance: §c+4.81%",
+                        "",
+                        "§6Heart of the Sea",
+                        "§7§7Grants §3+0.37α Sea Creature Chance",
+                        "§3§7to your pet for each §5Heart of the",
+                        "§5Mountain §7level.",
+                        "",
+                        "§6Expert Cave Fisher",
+                        "§7§7The fishing speed reduction from",
+                        "§7being underground is reduced by",
+                        "§7§a37%§7.",
+                        "",
+                        "§6Gift of the Ammonite",
+                        "§7§7Each Mining and Fishing level grants",
+                        "§7§b+0.18☂ Fishing Speed§7, §f+0.74✦ Speed",
+                        "§f§7and §a+0.74❈ Defense§7.",
+                        "",
+                        "§7Progress to Level 38: §e50.4%",
+                        "§2§l§m             §f§l§m            §r §e8,962.5§6/§e17k",
+                        "",
+                        "§7§eLeft-click to summon!",
+                        "§eRight-click to convert to an item!"
+                    ],
+                    "Name": "§7[Lvl 73] §6Ammonite"
+                },
+                "ExtraAttributes": {
+                    "petInfo": "{\"type\":\"AMMONITE\",\"active\":false,\"exp\":178092.49806000054,\"tier\":\"LEGENDARY\",\"hideInfo\":false,\"candyUsed\":0,\"uuid\":\"41a40cfb-4d86-4048-bb4d-80b927f81f3a\",\"uniqueId\":\"aa490569-1a0d-4a6c-b0d0-b1e88695ef1c\",\"hideRightClick\":false,\"noMove\":false}",
+                    "id": "PET",
+                    "uuid": "41a40cfb-4d86-4048-bb4d-80b927f81f3a"
+                }
+            },
+            "Damage": 3
+        },
+        {
+            "id": "minecraft:skull",
+            "Count": 1,
+            "tag": {
+                "SkullOwner": {
+                    "Id": "677c88f4-fa50-4e5d-8ed7-d581e9d0e330",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -1837,7 +2051,7 @@
                             }
                         ]
                     },
-                    "Name": "§94daabec-db36-43e5-ad97-462ac0e3dfa8"
+                    "Name": "§677c88f4-fa50-4e5d-8ed7-d581e9d0e330"
                 },
                 "display": {
                     "Lore": [
@@ -1880,7 +2094,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "12312a1a-71d7-46c5-8aca-d7b82a6d6a93",
+                    "Id": "4ee73c65-e147-4978-a9c9-b54c673e3a08",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -1889,7 +2103,7 @@
                             }
                         ]
                     },
-                    "Name": "§12312a1a-71d7-46c5-8aca-d7b82a6d6a93"
+                    "Name": "§4ee73c65-e147-4978-a9c9-b54c673e3a08"
                 },
                 "display": {
                     "Lore": [
@@ -1922,7 +2136,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "82b17644-7dbe-49af-92ba-5761339e4496",
+                    "Id": "edd8b2fb-c185-4069-a531-08f9816f3f97",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -1931,7 +2145,7 @@
                             }
                         ]
                     },
-                    "Name": "§82b17644-7dbe-49af-92ba-5761339e4496"
+                    "Name": "§edd8b2fb-c185-4069-a531-08f9816f3f97"
                 },
                 "display": {
                     "Lore": [
@@ -1987,7 +2201,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "0910e392-d642-4013-b71a-4eed522c7def",
+                    "Id": "b2c9ed7f-2ebb-463b-aad2-8c6b980d7b3f",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -1996,7 +2210,7 @@
                             }
                         ]
                     },
-                    "Name": "§0910e392-d642-4013-b71a-4eed522c7def"
+                    "Name": "§b2c9ed7f-2ebb-463b-aad2-8c6b980d7b3f"
                 },
                 "display": {
                     "Lore": [
@@ -2042,7 +2256,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "59f4fa47-7bbe-48bb-8a50-1546392e81d0",
+                    "Id": "362795e4-f1b3-4cc8-ac28-9d7e389d2859",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -2051,7 +2265,7 @@
                             }
                         ]
                     },
-                    "Name": "§59f4fa47-7bbe-48bb-8a50-1546392e81d0"
+                    "Name": "§362795e4-f1b3-4cc8-ac28-9d7e389d2859"
                 },
                 "display": {
                     "Lore": [
@@ -2096,7 +2310,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "9e0c6c8b-c99b-418d-a650-00b849990f60",
+                    "Id": "d245cca1-8934-49e4-aefa-8d620aee636f",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -2105,7 +2319,7 @@
                             }
                         ]
                     },
-                    "Name": "§9e0c6c8b-c99b-418d-a650-00b849990f60"
+                    "Name": "§d245cca1-8934-49e4-aefa-8d620aee636f"
                 },
                 "display": {
                     "Lore": [
@@ -2150,7 +2364,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "c1208c75-e15f-40db-928e-947ac9f6a71f",
+                    "Id": "57204f1b-6a22-4976-8456-2aa3d3b86cce",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -2159,7 +2373,7 @@
                             }
                         ]
                     },
-                    "Name": "§c1208c75-e15f-40db-928e-947ac9f6a71f"
+                    "Name": "§57204f1b-6a22-4976-8456-2aa3d3b86cce"
                 },
                 "display": {
                     "Lore": [
@@ -2206,7 +2420,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "585d2953-cb24-42ee-a024-a85c15566f2c",
+                    "Id": "378dc637-3259-4bdc-a388-99fa1141b9a9",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -2215,7 +2429,7 @@
                             }
                         ]
                     },
-                    "Name": "§585d2953-cb24-42ee-a024-a85c15566f2c"
+                    "Name": "§378dc637-3259-4bdc-a388-99fa1141b9a9"
                 },
                 "display": {
                     "Lore": [
@@ -2267,7 +2481,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "b54605cc-2860-4da1-a526-533f8d9ef0a1",
+                    "Id": "3739cb8a-6f52-49b4-8209-45f669676b00",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -2276,7 +2490,7 @@
                             }
                         ]
                     },
-                    "Name": "§b54605cc-2860-4da1-a526-533f8d9ef0a1"
+                    "Name": "§3739cb8a-6f52-49b4-8209-45f669676b00"
                 },
                 "display": {
                     "Lore": [
@@ -2324,7 +2538,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "fd83c4f5-ac80-4c8e-8cc9-197d3e368e58",
+                    "Id": "04e4fd89-b719-4b7d-ae3d-d0e78dceb9de",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -2333,7 +2547,7 @@
                             }
                         ]
                     },
-                    "Name": "§fd83c4f5-ac80-4c8e-8cc9-197d3e368e58"
+                    "Name": "§04e4fd89-b719-4b7d-ae3d-d0e78dceb9de"
                 },
                 "display": {
                     "Lore": [
@@ -2382,7 +2596,7 @@
             "Count": 1,
             "tag": {
                 "SkullOwner": {
-                    "Id": "026732d5-e4fe-48b0-b03b-41783695ae3a",
+                    "Id": "ac8a1c27-09f6-4e82-9b79-ffaa10c8554b",
                     "hypixelPopulated": 1,
                     "Properties": {
                         "textures": [
@@ -2391,7 +2605,7 @@
                             }
                         ]
                     },
-                    "Name": "§026732d5-e4fe-48b0-b03b-41783695ae3a"
+                    "Name": "§ac8a1c27-09f6-4e82-9b79-ffaa10c8554b"
                 },
                 "display": {
                     "Lore": [
@@ -2429,167 +2643,6 @@
                     "petInfo": "{\"type\":\"RAT\",\"active\":false,\"exp\":0.0,\"tier\":\"LEGENDARY\",\"hideInfo\":false,\"candyUsed\":0,\"uuid\":\"6752da5a-f497-46ee-9cc7-7ead33d621fa\",\"uniqueId\":\"19fbd59d-eeae-4d18-9d96-2967ae90302c\",\"hideRightClick\":false,\"noMove\":false}",
                     "id": "PET",
                     "uuid": "6752da5a-f497-46ee-9cc7-7ead33d621fa"
-                }
-            },
-            "Damage": 3
-        },
-        {
-            "id": "minecraft:skull",
-            "Count": 1,
-            "tag": {
-                "SkullOwner": {
-                    "Id": "d7488923-9c39-4708-a0cb-0b2016ed426b",
-                    "hypixelPopulated": 1,
-                    "Properties": {
-                        "textures": [
-                            {
-                                "Value": "ewogICJ0aW1lc3RhbXAiIDogMTcwNzg1NDIwMTk4MywKICAicHJvZmlsZUlkIiA6ICI1NzgzZWMxNDgxMDI0ZDJmOTk4N2JhNGZhNWNlMmFmOCIsCiAgInByb2ZpbGVOYW1lIiA6ICJCbHVlUGhlbml4NDMiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzc1MzRlOTdmMzZlNWE4MzM1OTI4ZTE3MWVjOTk2MDhiZWU3ZmIxNmUyNjBhZmIzMDEwMjViM2IxN2VlZWZjNCIKICAgIH0KICB9Cn0="
-                            }
-                        ]
-                    },
-                    "Name": "§d7488923-9c39-4708-a0cb-0b2016ed426b"
-                },
-                "display": {
-                    "Lore": [
-                        "§8Fishing Pet",
-                        "",
-                        "§7Sea Creature Chance: §c+10%",
-                        "",
-                        "§6Thick Blubber",
-                        "§7§7Each time you catch a Sea Creature,",
-                        "§7reduce your §b❄ Cold §7by §a6§7.",
-                        "",
-                        "§6Expert Glacite Fisher",
-                        "§7§7The fishing speed reduction from",
-                        "§7being underground is reduced by",
-                        "§7§a100%§7.",
-                        "",
-                        "§6Subzero Hero",
-                        "§7§7Gain §b+75§b☂ Fishing Speed §7while in the",
-                        "§7§bGlacite Tunnels§7.",
-                        "",
-                        "§6Held Item: §5Fishing Exp Boost",
-                        "§7Gives §a+50% §7pet exp for Fishing.",
-                        "",
-                        "§b§lMAX LEVEL",
-                        "§8▸ 25,370,185 XP",
-                        "",
-                        "§7§eLeft-click to summon!",
-                        "§eRight-click to convert to an item!"
-                    ],
-                    "Name": "§7[Lvl 100] §6Penguin"
-                },
-                "ExtraAttributes": {
-                    "petInfo": "{\"type\":\"PENGUIN\",\"active\":false,\"exp\":2.537018568599045E7,\"tier\":\"LEGENDARY\",\"hideInfo\":false,\"heldItem\":\"PET_ITEM_FISHING_SKILL_BOOST_EPIC\",\"candyUsed\":0,\"uuid\":\"a6af52e1-e369-43f2-91ea-fea9a5577e91\",\"uniqueId\":\"492dc65f-3d26-4b37-b9aa-d556f5cc8bb8\",\"hideRightClick\":false,\"noMove\":false}",
-                    "id": "PET",
-                    "uuid": "a6af52e1-e369-43f2-91ea-fea9a5577e91"
-                }
-            },
-            "Damage": 3
-        },
-        {
-            "id": "minecraft:skull",
-            "Count": 1,
-            "tag": {
-                "SkullOwner": {
-                    "Id": "52a7fc89-eeb4-4d21-9efa-c52d9349a49b",
-                    "hypixelPopulated": 1,
-                    "Properties": {
-                        "textures": [
-                            {
-                                "Value": "ewogICJ0aW1lc3RhbXAiIDogMTY0NzA0MDE4NjI1NywKICAicHJvZmlsZUlkIiA6ICI0ZDEzZWUyZjViOWI0N2I2OGU2NzhhMjAxN2VmZTc1MyIsCiAgInByb2ZpbGVOYW1lIiA6ICJCcmF5ZGVyZWsiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWYwMjM5ZmI0OThlNTkwN2VkZTEyYWIzMjYyOWVlOTVmMDA2NDU3NGE5ZmZkZmY5ZmMzYTFjOGUyZWMxNzU4NyIKICAgIH0KICB9Cn0="
-                            }
-                        ]
-                    },
-                    "Name": "§52a7fc89-eeb4-4d21-9efa-c52d9349a49b"
-                },
-                "display": {
-                    "Lore": [
-                        "§8Combat Pet",
-                        "",
-                        "§7Health: §a+400",
-                        "§7Strength: §c+40",
-                        "",
-                        "§6Crimson",
-                        "§7§7Grants §a15% §7extra Crimson Essence§7.",
-                        "",
-                        "§6Wither Bait",
-                        "§7§7Increases the odds of finding a",
-                        "§7vanquisher by §a15%§7.",
-                        "",
-                        "§6Kuudra Fortune",
-                        "§7§7Gain §6+50☘ Mining Fortune §7while on",
-                        "§7the Crimson Isle.",
-                        "",
-                        "§7§8This pet's perks are active even",
-                        "§8when the pet is not summoned!",
-                        "",
-                        "§7§8This pet automatically has EXP share!",
-                        "",
-                        "§7§8This pet only gains XP on the",
-                        "§8§cCrimson Isle§8!",
-                        "",
-                        "§b§lMAX LEVEL",
-                        "§8▸ 25,359,686 XP",
-                        "",
-                        "§7§eLeft-click to summon!",
-                        "§eRight-click to convert to an item!"
-                    ],
-                    "Name": "§7[Lvl 100] §9Kuudra"
-                },
-                "ExtraAttributes": {
-                    "petInfo": "{\"type\":\"KUUDRA\",\"active\":false,\"exp\":2.535968610053896E7,\"tier\":\"RARE\",\"hideInfo\":false,\"candyUsed\":0,\"uuid\":\"48c730f6-9d1b-420a-8ba3-390e86df04a8\",\"uniqueId\":\"d66abaa3-7ba4-4acb-9b10-c5dbf1eb1f8e\",\"hideRightClick\":false,\"noMove\":false}",
-                    "id": "PET",
-                    "uuid": "48c730f6-9d1b-420a-8ba3-390e86df04a8"
-                }
-            },
-            "Damage": 3
-        },
-        {
-            "id": "minecraft:skull",
-            "Count": 1,
-            "tag": {
-                "SkullOwner": {
-                    "Id": "f6cb84e3-6730-4cf4-b733-dce100eb498c",
-                    "hypixelPopulated": 1,
-                    "Properties": {
-                        "textures": [
-                            {
-                                "Value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTY1N2NkNWMyOTg5ZmY5NzU3MGZlYzRkZGNkYzY5MjZhNjhhMzM5MzI1MGMxYmUxZjBiMTE0YTFkYjEifX19"
-                            }
-                        ]
-                    },
-                    "Name": "§f6cb84e3-6730-4cf4-b733-dce100eb498c"
-                },
-                "display": {
-                    "Lore": [
-                        "§8Foraging Pet",
-                        "",
-                        "§7Speed: §a+50",
-                        "§7Ferocity: §a+10",
-                        "",
-                        "§6Foraging Wisdom Boost",
-                        "§7§7§7Grants §3+30☯ Foraging Wisdom§7.",
-                        "",
-                        "§6Tree Hugger",
-                        "§7§7Foraging minions work §a30% §7faster",
-                        "§7while on your island.",
-                        "",
-                        "§6Held Item: §9Mining Exp Boost",
-                        "§7Gives §a+40% §7pet exp for Mining.",
-                        "",
-                        "§b§lMAX LEVEL",
-                        "§8▸ 20,258,353 XP",
-                        "",
-                        "§7§eLeft-click to summon!",
-                        "§eRight-click to convert to an item!"
-                    ],
-                    "Name": "§7[Lvl 100] §5Ocelot"
-                },
-                "ExtraAttributes": {
-                    "petInfo": "{\"type\":\"OCELOT\",\"active\":false,\"exp\":2.0258353524297565E7,\"tier\":\"EPIC\",\"hideInfo\":false,\"heldItem\":\"PET_ITEM_MINING_SKILL_BOOST_RARE\",\"candyUsed\":0,\"uuid\":\"762d5ccf-7c00-455b-b3a1-dee765f29665\",\"uniqueId\":\"c0a248cb-7354-44a3-9557-56782738f7f9\",\"hideRightClick\":false,\"noMove\":false}",
-                    "id": "PET",
-                    "uuid": "762d5ccf-7c00-455b-b3a1-dee765f29665"
                 }
             },
             "Damage": 3

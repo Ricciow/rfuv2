@@ -37,11 +37,22 @@ class ManagerSettings {
         java.awt.Desktop.getDesktop().browse(new java.net.URI("https://discord.gg/JfrXm6TqXz"));
     }
 
+    @ButtonProperty({
+        name: "Come help!",
+        description: "Contribute if you can!",
+        category: "Introduction",
+        subcategory: '=== Welcome ===',
+        placeholder: "   &8&lGitHub"
+    })
+    openGitHub() {
+        java.awt.Desktop.getDesktop().browse(new java.net.URI("https://github.com/Ricciow/rfuv2"));
+    }
+
     @SwitchProperty({
         name: 'Toggle load messages',
         description: 'Enable/Disable the loading messages',
         category: 'Introduction',
-        subcategory: '=== Welcome ===',
+        subcategory: 'Other',
     })
     loadMessages = true;
 
